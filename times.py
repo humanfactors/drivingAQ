@@ -5,10 +5,12 @@ INTERVAL = (10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15)
 THRESHOLD = 325
 
 def threshold(t):
+    """Set CONST threshold to given value"""
     global THRESHOLD
     THRESHOLD = t
 
 def choose(i, k, thresh):
+    """Sample from set i, k times, ensuring sum of k !> threshold"""
     if min(i) * k >= thresh: raise ValueError
     l = [thresh]
     while sum(l) >= thresh:
@@ -16,7 +18,8 @@ def choose(i, k, thresh):
     return l
 
 def generatetimes(ndots, starttime):
-    cumsum, sample  = starttime, choose(INTERVAL, ndots, THRESHOLD)
+    """Generate n PDT dots, starting from a baseline time, incrementing by an interval"""
+    cumsum, sample = starttime, choose(INTERVAL, ndots, THRESHOLD)
     timesid = []
     for i in range(ndots):
         timesid.append(cumsum)
@@ -25,8 +28,3 @@ def generatetimes(ndots, starttime):
 
 if __name__ == "__main__":
     TIMINGDICT = {'ON' : [60, 830, 445], 'OFF' : [445, 60, 830]}
-    b1 = (generatetimes(27, TIMINGDICT['OFF'][0]))
-    b2 = (generatetimes(26, TIMINGDICT['OFF'][1]))
-    b3 = (generatetimes(27, TIMINGDICT['OFF'][2]))
-    for i in b3:
-        print(i)

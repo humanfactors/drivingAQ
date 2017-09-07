@@ -4,14 +4,15 @@ import random
 import times
 
 def main():
-    y = get_ycoordinates("input/ycoord.csv")
-    coords = get_coords("input/xcoordloc.csv", y)
-    random_locations = shuffle_locations(coords)
-    with open('test.csv', 'w+', newline='') as o:
-        w = csv.writer(o)
-        for list in random_locations:
-            w.writerow(list)
-    print(random_locations)
+    pass
+    # y = get_ycoordinates("input/ycoord.csv")
+    # coords = get_coords("input/xcoordloc.csv", y)
+    # random_locations = shuffle_locations(coords)
+    # with open('test.csv', 'w+', newline='') as o:
+    #     w = csv.writer(o)
+    #     for list in random_locations:
+    #         w.writerow(list)
+    # print(random_locations)
 
 def get_ycoordinates(filename):
     """Transforms CSV file of Y coordinates (new line seperated) to list"""
