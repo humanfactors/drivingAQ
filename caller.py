@@ -22,13 +22,21 @@ ontimes.append(times.generatetimes(27, TIMINGDICT['ON'][2]))
 ontimes = [i for s in ontimes for i in s]
 
 timedict = {'on' : {}, 'off' : {}}
+
 for i in range(80):
     timedict['on'][i+1] = offtimes[i]
     timedict['off'][i+1] = ontimes[i]
 
+random.shuffle(random_locations)
+for sk, sv in timedict['off'].items():
+    print("T%s" % (sk), sv, random_locations[sk-1])    
 
-print(timedict)
-    
+print("----------")
+
+random.shuffle(random_locations)
+for sk, sv in timedict['on'].items():
+    print("T%s" % (sk), sv, random_locations[sk-1])    
+
 
 # print(ontimes)
 # with open('test.csv', 'w+', newline='') as o:
