@@ -50,7 +50,7 @@ def enumerate_ids(locationlist):
     """For a given list of locations, give them all an ID"""
     counter = 1
     for location in locationlist:
-        location.insert(0,"ID%s" % (counter))
+        location.insert(0,"LOCID%s" % (counter))
         counter+=1
     return locationlist
 
