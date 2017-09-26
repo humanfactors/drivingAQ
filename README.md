@@ -1,8 +1,14 @@
 # drivingAQ
 Driving AQ for Visser Lab
 
+## Dependencies
+
+To run the scripts requires Python 3.6 due to the use of `random.choices()`.
+This can be changes to random sample for backward compatibility.
+
+
 ## Structure
-* `docs/` - Supporting docuemtation directory
+* `docs/` - Supporting documentation directory
 * `input/` - static directory, files should be considered part of the package
 * `output/` - dynamic directory for output files
 * `locations.py` - library functions for generating dot location lists
@@ -20,7 +26,7 @@ dictionaries calling each other. If lookup keys aren't working as intended,
 ensure that the keys are strings for lookup dicts or integer for `finaldict`.
 `locations.py` is effectively just reading the input of X and Y coordinates from
 relevant input files, shuffling them up and assigning each coordinate an ID.
-Times has a bunch of functions mostly just for generating the times that dots
+`times.py` has a bunch of functions mostly just for generating the times that dots
 appear. The majority of confusing stuff is just regarding sampling the
 inter-stimulus intervals. Finally, `subjectcall` contains the class `Subject`.
 This requires a name at instantiation (i.e. subject number) and each `Subject`
