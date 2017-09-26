@@ -22,4 +22,6 @@ ensure that the keys are strings for lookup dicts or integer for `finaldict`.
 relevant input files, shuffling them up and assigning each coordinate an ID.
 Times has a bunch of functions mostly just for generating the times that dots
 appear. The majority of confusing stuff is just regarding sampling the
-inter-stimulus intervals. Finally, `subjectcall` contains the class `Subject`
+inter-stimulus intervals. Finally, `subjectcall` contains the class `Subject`.
+This requires a name at instantiation (i.e. subject number) and each `Subject`
+instance will have a unique order of locations, and unique timings for PDT.
