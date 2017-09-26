@@ -8,9 +8,11 @@ TIMINGDICT = {'ON' : [60, 830, 445], 'OFF' : [445, 60, 830]}
 
 # Dot lookup dict
 DOTLOOKUPDICT = {}
+REVERSEDOTDICT = {'on' : {}, 'off' : {}}
 dotlookupfile = csv.reader(open("input/onoff.csv", 'r'))
 for row in dotlookupfile:
     DOTLOOKUPDICT[row[0]] = [row[1], row[2]]
+    REVERSEDOTDICT[row[1]][row[2]] = row[0]
 
 class Subject(object):
     def __init__(self, subjectid):
@@ -59,11 +61,12 @@ class Subject(object):
     def writeout(self):
         o = open('output/subj_%s.csv' % (self.subjectid), 'w+', newline='')
         csvo = csv.writer(o)
-        csvo.writerow(['INT', 'ORDERID', 'TIME', 'LOCATIONID', 'LOCATION', "X", "Y"])
+        csvo.writerow(['INT', 'PRESENTORDER', 'TYPEORDERID', 'TIME', 'LOCATIONID', 'LOCATION', "X", "Y"])
         for key, val in self.finaldict.items():
             for subkey, subval in val.items():
                 sl = subval['locationinfo']
-                csvo.writerow([key, subkey, subval['time'], sl[0], sl[1], sl[2], sl[3]])
+                presord = REVERSEDOTDICT[key][str(subkey)]
+                csvo.writerow([key, presord, subkey, subval['time'], sl[0], sl[1], sl[2], sl[3]])
         o.close()
 
 def main():

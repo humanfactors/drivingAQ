@@ -61,5 +61,46 @@ for line in scepart1:
 
     testout.write(line)
 
+testout.close()
+testout = open("output/testfull2.sce", 'w')
+
+for line in scepart2:
+
+    if ISISTR in line:
+        counter += 1
+        lookup = subjectcall.DOTLOOKUPDICT[str(counter)]
+        trialinfo = testsubj.finaldict[lookup[0]][int(lookup[1])]
+        trialtime = trialinfo['time']
+        xposition = trialinfo['locationinfo'][2]
+        yposition = trialinfo['locationinfo'][3]
+
+    if ISISTR in line or ONISTR in line:
+        switch = 1
+        lastswitch = "time"
+
+    if re.search(POSYSTR, line):
+        switch = 1
+        lastswitch = "y"
+
+    if re.search(POSXSTR, line):
+        switch = 1
+        lastswitch = "x"
+
+    elif re.match(VALSTR, line) and switch == 1:
+        switch = 0
+        if lastswitch == 'time':
+            line = valuesub(line, str(trialtime))
+            print("Time", line)
+        elif lastswitch == 'y':
+            line = valuesub(line, str(yposition))
+            print("Y Pos", line)
+        elif lastswitch == 'x':
+            line = valuesub(line, str(xposition))
+            print("X Pos", line)
+
+    testout.write(line)
+
+
+
 testsubj.writeout()
 testout.close()
