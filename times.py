@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 import random
-from collections import Counter
-import itertools
 
 INTERVAL = (10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 
             10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14)
@@ -24,6 +22,7 @@ def finalsample(i, k, thresh):
     intervals = list(i)
     randomadds = choose(i, k - len(i), THRESHOLD - sum(i))
     intervals.extend(randomadds)
+    random.shuffle(intervals)
     return intervals
 
 def generatetimes(ndots, starttime):

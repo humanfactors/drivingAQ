@@ -6,8 +6,15 @@ import random
 # Start times for each block
 TIMINGDICT = {'ON' : [60, 830, 445], 'OFF' : [445, 60, 830]}
 
+# Dot lookup dict
+DOTLOOKUPDICT = {}
+dotlookupfile = csv.reader(open("input/onoff.csv", 'r'))
+for row in dotlookupfile:
+    DOTLOOKUPDICT[row[0]] = [row[1], row[2]]
+
 class Subject(object):
     def __init__(self, subjectid):
+        print("Generating subject %s" % (subjectid))
         self.subjectid = subjectid
         # Gather the possible X and y coordinates as dict
         self.coords = locations.get_coords("input/xcoordloc.csv", locations.get_ycoordinates("input/ycoord.csv"))
@@ -50,7 +57,7 @@ class Subject(object):
         return self.finaldict
 
     def writeout(self):
-        o = open('subj_%s.csv' % (self.subjectid), 'w+', newline='')
+        o = open('output/subj_%s.csv' % (self.subjectid), 'w+', newline='')
         csvo = csv.writer(o)
         csvo.writerow(['INT', 'ORDERID', 'TIME', 'LOCATIONID', 'LOCATION', "X", "Y"])
         for key, val in self.finaldict.items():
@@ -59,5 +66,10 @@ class Subject(object):
                 csvo.writerow([key, subkey, subval['time'], sl[0], sl[1], sl[2], sl[3]])
         o.close()
 
-mainpart = Subject("test")
-mainpart.writeout()
+def main():
+    mainpart = Subject("test")
+    mainpart.writeout()
+
+if __name__ == '__main__':
+    main()
+    
