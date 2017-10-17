@@ -89,6 +89,10 @@ for line in scepart2:
         switch = 1
         lastswitch = "time"
 
+    if OFFISTR in line:
+        switch = 1
+        lastswitch = "offtime"
+
     if re.search(POSYSTR, line):
         switch = 1
         lastswitch = "y"
@@ -101,14 +105,20 @@ for line in scepart2:
         switch = 0
         if lastswitch == 'time':
             line = valuesub(line, str(trialtime))
-            print("Time", line)
+            # print("Time", line)
         elif lastswitch == 'y':
             line = valuesub(line, str(yposition))
-            print("Y Pos", line)
+            # print("Y Pos", line)
         elif lastswitch == 'x':
             line = valuesub(line, str(xposition))
-            print("X Pos", line)
-
+            # print("X Pos", line)
+    
+    elif re.match(VALSTROFF, line) and switch == 1:
+        switch = 0
+        if lastswitch == "offtime":
+            line = valuesub(line, str(trialtime))
+            print("made it")
+            
     testout.write(line)
 
 
