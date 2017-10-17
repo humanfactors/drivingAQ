@@ -7,8 +7,10 @@ scepart2 = open("input/aqPart2.sce")
 
 # Set the search templates
 ISISTR = "LABEL=\"Task: ISI\""
-ONISTR = "Rule: Turn on image"
+ONISTR = "LABEL=\"Rule: Turn on image\""
+OFFISTR = "Rule: Turn off image (2s timeout)"
 VALSTR = re.compile(r"\t\t\t\t\t\t\tVALUE")
+VALSTROFF = re.compile(r"\t\t\t\t\t\t\t\t\tVALUE")
 POSXSTR = re.compile(r"^\t\t\t\t\t\tTYPEOF PARAMETER \(SCREEN_XPOSITION\)")
 POSYSTR = re.compile(r"^\t\t\t\t\t\tTYPEOF PARAMETER \(SCREEN_YPOSITION\)")
 
@@ -39,6 +41,10 @@ for line in scepart1:
         switch = 1
         lastswitch = "time"
 
+    if OFFISTR in line:
+        switch = 1
+        lastswitch = "offtime"
+
     if re.search(POSYSTR, line):
         switch = 1
         lastswitch = "y"
@@ -51,14 +57,19 @@ for line in scepart1:
         switch = 0
         if lastswitch == 'time':
             line = valuesub(line, str(trialtime))
-            print("Time", line)
+            # print("Time", line)
         elif lastswitch == 'y':
             line = valuesub(line, str(yposition))
-            print("Y Pos", line)
+            # print("Y Pos", line)
         elif lastswitch == 'x':
             line = valuesub(line, str(xposition))
-            print("X Pos", line)
-
+            # print("X Pos", line)
+    
+    elif re.match(VALSTROFF, line) and switch == 1:
+        switch = 0
+        if lastswitch == "offtime":
+            line = valuesub(line, str(trialtime))
+            print("made it")
     testout.write(line)
 
 testout.close()

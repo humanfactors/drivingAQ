@@ -119,7 +119,7 @@ TYPEOF SCENARIO (0)
 {
 	IS_EXPANDED="1"
 	LABEL="Main"
-	FILE="exp1-subj1-part2_Main"
+	FILE="AQ test part1_Main"
 	TASK_KIND="0"
 
 	TYPEOF INCLUDE (0)
@@ -394,17 +394,2221 @@ TYPEOF SCENARIO (0)
 		}
 	}
 
-	TYPEOF TASK (1)
+	TYPEOF TASK (69)
 	{
-		LABEL="PDT Baseline"
+		LABEL="Instructions INT OFF"
 		TASK_KIND="0"
 
-		TYPEOF TASK (118)
+		TYPEOF RULE (96)
 		{
-			LABEL="Dot 1"
+			IS_EXPANDED="1"
+			LABEL="Rule: "
+
+			TYPEOF CONDITION (SUPERIOR)
+			{
+				IS_EXPANDED="1"
+				MODIFIER="BECOMES_TRUE"
+
+				TYPEOF PARAMETER (OPERAND_1)
+				{
+					KIND="FUNCTION"
+
+					TYPEOF FUNCTION (GET_TASK_CLOCK)
+					{
+					}
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (OPERAND_2)
+				{
+					KIND="USER"
+					VALUE="2"
+					OWNER_FILE=""
+				}
+			}
+
+			TYPEOF ACTION (SET_IMAGE)
+			{
+				IS_EXPANDED="1"
+
+				TYPEOF PARAMETER (SCREEN_XPOSITION)
+				{
+					KIND="USER"
+					VALUE="25"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (SCREEN_YPOSITION)
+				{
+					KIND="USER"
+					VALUE="25"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+				{
+					KIND="USER"
+					VALUE="50"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+				{
+					KIND="USER"
+					VALUE="70"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (IMAGE_FILENAME)
+				{
+					KIND="FILE"
+					VALUE="AQ Exp NO Int block.PNG"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (CHANNEL_NAME)
+				{
+					KIND="USER"
+					VALUE="VISUAL_TRIPLEHEAD:1.1"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (DISPLAY_TIME)
+				{
+					KIND="USER"
+					VALUE="18"
+					OWNER_FILE=""
+				}
+			}
+		}
+
+		TYPEOF RULE (95)
+		{
+			LABEL="Rule"
+
+			TYPEOF CONDITION (SUPERIOR)
+			{
+				IS_EXPANDED="1"
+				MODIFIER="BECOMES_TRUE"
+
+				TYPEOF PARAMETER (OPERAND_1)
+				{
+					KIND="FUNCTION"
+
+					TYPEOF FUNCTION (GET_TASK_CLOCK)
+					{
+					}
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (OPERAND_2)
+				{
+					KIND="USER"
+					VALUE="20"
+					OWNER_FILE=""
+				}
+			}
+
+			TYPEOF ACTION (GOTO_TASK)
+			{
+				IS_EXPANDED="1"
+
+				TYPEOF PARAMETER (TASK_NUMBER)
+				{
+					KIND="ENUM"
+					VALUE="GOTO_NEXT_TASK"
+					OWNER_FILE=""
+				}
+			}
+		}
+	}
+
+	TYPEOF TASK (221)
+	{
+		IS_EXPANDED="1"
+		LABEL="INT OFF"
+		TASK_KIND="0"
+	}
+
+	TYPEOF TASK (89)
+	{
+		LABEL="PDT INT OFF"
+		TASK_KIND="0"
+
+		TYPEOF TASK (91)
+		{
+			LABEL="OFF Dot 28"
 			TASK_KIND="0"
 
-			TYPEOF TASK (120)
+			TYPEOF TASK (93)
+			{
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (129)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (92)
+			{
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (128)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="10.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (127)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (126)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="60"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (124)
+		{
+			LABEL="OFF Dot 29"
+			TASK_KIND="0"
+
+			TYPEOF TASK (126)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (173)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="70"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (125)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (172)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="70"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="17.86"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (171)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (170)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="70"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (148)
+		{
+			LABEL="OFF Dot 30"
+			TASK_KIND="0"
+
+			TYPEOF TASK (150)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (205)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="80"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (149)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (204)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="80"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="28.57"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (203)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (202)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="80"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (151)
+		{
+			LABEL="OFF Dot 31"
+			TASK_KIND="0"
+
+			TYPEOF TASK (153)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (209)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="90"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (152)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (208)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="90"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="35.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (207)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (206)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="90"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (154)
+		{
+			LABEL="OFF Dot 32"
+			TASK_KIND="0"
+
+			TYPEOF TASK (156)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (213)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="100"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (155)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (212)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="100"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="64.29"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (211)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (210)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="100"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (157)
+		{
+			LABEL="OFF Dot 33"
+			TASK_KIND="0"
+
+			TYPEOF TASK (159)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (217)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="110"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (158)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (216)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="110"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="71.43"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (215)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (214)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="110"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (160)
+		{
+			LABEL="OFF Dot 34"
+			TASK_KIND="0"
+
+			TYPEOF TASK (162)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
@@ -433,7 +2637,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="8"
+							VALUE="120"
 							OWNER_FILE=""
 						}
 					}
@@ -452,7 +2656,7 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (119)
+			TYPEOF TASK (161)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
@@ -481,7 +2685,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="8"
+							VALUE="120"
 							OWNER_FILE=""
 						}
 					}
@@ -493,14 +2697,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="27.6"
+							VALUE="82.14"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="57.8"
+							VALUE="60.99"
 							OWNER_FILE=""
 						}
 
@@ -555,3555 +2759,97 @@ TYPEOF SCENARIO (0)
 						{
 							KIND="USER"
 							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (219)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
 							OWNER_FILE=""
 						}
 					}
 				}
 
 				TYPEOF RULE (218)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (217)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="8"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (115)
-		{
-			LABEL="Dot 2"
-			TASK_KIND="0"
-
-			TYPEOF TASK (117)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (216)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="16"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (116)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (215)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="16"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="14.6"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="59.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (214)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (213)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="16"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (112)
-		{
-			LABEL="Dot 3"
-			TASK_KIND="0"
-
-			TYPEOF TASK (114)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (212)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="30"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (113)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (211)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="30"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="15.6"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="60.2"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (210)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (187)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="30"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (109)
-		{
-			IS_EXPANDED="1"
-			LABEL="Dot 4"
-			TASK_KIND="0"
-
-			TYPEOF TASK (111)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (186)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="42"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (110)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (185)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="42"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="17.6"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="62"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (184)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (183)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="42"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (106)
-		{
-			IS_EXPANDED="1"
-			LABEL="Dot 5"
-			TASK_KIND="0"
-
-			TYPEOF TASK (108)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (182)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="48"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (107)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (181)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="48"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="20.6"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="59.9"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (136)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (135)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="48"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (103)
-		{
-			IS_EXPANDED="1"
-			LABEL="Dot 6"
-			TASK_KIND="0"
-
-			TYPEOF TASK (105)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (134)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="58"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (104)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (133)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="58"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="30.6"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="59.6"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (132)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (131)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="58"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (100)
-		{
-			IS_EXPANDED="1"
-			LABEL="Dot 7"
-			TASK_KIND="0"
-
-			TYPEOF TASK (102)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (130)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="66"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (101)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (129)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="66"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="15.6"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="61.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (128)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (127)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="66"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (97)
-		{
-			IS_EXPANDED="1"
-			LABEL="Dot 8"
-			TASK_KIND="0"
-
-			TYPEOF TASK (99)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (126)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="82"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (98)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (125)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="82"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="20.6"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="60.2"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (124)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (123)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="82"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (94)
-		{
-			IS_EXPANDED="1"
-			LABEL="Dot 9"
-			TASK_KIND="0"
-
-			TYPEOF TASK (96)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (122)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="92"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (95)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (121)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="92"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="12.6"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="60.5"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (120)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (119)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="92"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (90)
-		{
-			IS_EXPANDED="1"
-			LABEL="Dot 10"
-			TASK_KIND="0"
-
-			TYPEOF TASK (93)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (118)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="108"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (91)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (117)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="108"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="9.6"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="59.6"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (116)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (115)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="108"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (87)
-		{
-			IS_EXPANDED="1"
-			LABEL="Dot 11"
-			TASK_KIND="0"
-
-			TYPEOF TASK (89)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (114)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="120"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (88)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (113)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="120"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="28.6"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="57.2"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (112)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (111)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -4202,19 +2948,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (84)
+		TYPEOF TASK (163)
 		{
-			IS_EXPANDED="1"
-			LABEL="Dot 12"
+			LABEL="OFF Dot 35"
 			TASK_KIND="0"
 
-			TYPEOF TASK (86)
+			TYPEOF TASK (165)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (110)
+				TYPEOF RULE (225)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -4237,7 +2982,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="134"
+							VALUE="130"
 							OWNER_FILE=""
 						}
 					}
@@ -4256,13 +3001,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (85)
+			TYPEOF TASK (164)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (109)
+				TYPEOF RULE (224)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -4285,7 +3030,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="134"
+							VALUE="130"
 							OWNER_FILE=""
 						}
 					}
@@ -4297,14 +3042,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="21.6"
+							VALUE="89.29"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="62"
+							VALUE="60.99"
 							OWNER_FILE=""
 						}
 
@@ -4364,7 +3109,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (108)
+				TYPEOF RULE (223)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -4449,7 +3194,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (105)
+				TYPEOF RULE (222)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -4480,7 +3225,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="134"
+									VALUE="130"
 									OWNER_FILE=""
 								}
 
@@ -4548,19 +3293,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (79)
+		TYPEOF TASK (166)
 		{
-			IS_EXPANDED="1"
-			LABEL="Dot 13"
+			LABEL="OFF Dot 36"
 			TASK_KIND="0"
 
-			TYPEOF TASK (83)
+			TYPEOF TASK (168)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (104)
+				TYPEOF RULE (229)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -4583,7 +3327,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="146"
+							VALUE="140"
 							OWNER_FILE=""
 						}
 					}
@@ -4602,13 +3346,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (80)
+			TYPEOF TASK (167)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (103)
+				TYPEOF RULE (228)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -4631,7 +3375,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="146"
+							VALUE="140"
 							OWNER_FILE=""
 						}
 					}
@@ -4643,14 +3387,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="29.6"
+							VALUE="11.92"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="60.8"
+							VALUE="60.99"
 							OWNER_FILE=""
 						}
 
@@ -4710,7 +3454,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (102)
+				TYPEOF RULE (227)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -4795,7 +3539,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (101)
+				TYPEOF RULE (226)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -4826,7 +3570,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="146"
+									VALUE="140"
 									OWNER_FILE=""
 								}
 
@@ -4894,19 +3638,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (45)
+		TYPEOF TASK (94)
 		{
-			IS_EXPANDED="1"
-			LABEL="Dot 14"
+			LABEL="OFF Dot 37"
 			TASK_KIND="0"
 
-			TYPEOF TASK (69)
+			TYPEOF TASK (96)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (90)
+				TYPEOF RULE (133)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -4929,7 +3672,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="156"
+							VALUE="150"
 							OWNER_FILE=""
 						}
 					}
@@ -4948,13 +3691,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (68)
+			TYPEOF TASK (95)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (89)
+				TYPEOF RULE (132)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -4977,7 +3720,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="156"
+							VALUE="150"
 							OWNER_FILE=""
 						}
 					}
@@ -4989,14 +3732,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="30.6"
+							VALUE="11.92"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="56.6"
+							VALUE="60.99"
 							OWNER_FILE=""
 						}
 
@@ -5056,7 +3799,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (88)
+				TYPEOF RULE (131)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -5141,7 +3884,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (87)
+				TYPEOF RULE (130)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -5172,7 +3915,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="156"
+									VALUE="150"
 									OWNER_FILE=""
 								}
 
@@ -5240,19 +3983,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (42)
+		TYPEOF TASK (97)
 		{
-			IS_EXPANDED="1"
-			LABEL="Dot 15"
+			LABEL="OFF Dot 38"
 			TASK_KIND="0"
 
-			TYPEOF TASK (44)
+			TYPEOF TASK (99)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (86)
+				TYPEOF RULE (137)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -5275,7 +4017,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="162"
+							VALUE="160"
 							OWNER_FILE=""
 						}
 					}
@@ -5294,13 +4036,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (43)
+			TYPEOF TASK (98)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (85)
+				TYPEOF RULE (136)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -5323,7 +4065,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="162"
+							VALUE="160"
 							OWNER_FILE=""
 						}
 					}
@@ -5335,14 +4077,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="22.6"
+							VALUE="11.92"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="60.8"
+							VALUE="60.99"
 							OWNER_FILE=""
 						}
 
@@ -5402,7 +4144,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (84)
+				TYPEOF RULE (135)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -5487,7 +4229,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (83)
+				TYPEOF RULE (134)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -5518,7 +4260,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="162"
+									VALUE="160"
 									OWNER_FILE=""
 								}
 
@@ -5586,19 +4328,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (39)
+		TYPEOF TASK (100)
 		{
-			IS_EXPANDED="1"
-			LABEL="Dot 16"
+			LABEL="OFF Dot 39"
 			TASK_KIND="0"
 
-			TYPEOF TASK (41)
+			TYPEOF TASK (102)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (82)
+				TYPEOF RULE (141)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -5621,7 +4362,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="176"
+							VALUE="170"
 							OWNER_FILE=""
 						}
 					}
@@ -5640,13 +4381,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (40)
+			TYPEOF TASK (101)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (81)
+				TYPEOF RULE (140)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -5669,7 +4410,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="176"
+							VALUE="170"
 							OWNER_FILE=""
 						}
 					}
@@ -5681,14 +4422,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="11.6"
+							VALUE="11.92"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="60.5"
+							VALUE="60.99"
 							OWNER_FILE=""
 						}
 
@@ -5748,7 +4489,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (80)
+				TYPEOF RULE (139)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -5833,7 +4574,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (79)
+				TYPEOF RULE (138)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -5864,7 +4605,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="176"
+									VALUE="170"
 									OWNER_FILE=""
 								}
 
@@ -5932,19 +4673,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (36)
+		TYPEOF TASK (103)
 		{
-			IS_EXPANDED="1"
-			LABEL="Dot 17"
+			LABEL="OFF Dot 40"
 			TASK_KIND="0"
 
-			TYPEOF TASK (38)
+			TYPEOF TASK (105)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (78)
+				TYPEOF RULE (145)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -5967,7 +4707,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="182"
+							VALUE="180"
 							OWNER_FILE=""
 						}
 					}
@@ -5986,13 +4726,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (37)
+			TYPEOF TASK (104)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (76)
+				TYPEOF RULE (144)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -6015,7 +4755,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="182"
+							VALUE="180"
 							OWNER_FILE=""
 						}
 					}
@@ -6027,14 +4767,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="7.6"
+							VALUE="11.92"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="58.7"
+							VALUE="60.99"
 							OWNER_FILE=""
 						}
 
@@ -6094,7 +4834,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (75)
+				TYPEOF RULE (143)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -6179,7 +4919,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (74)
+				TYPEOF RULE (142)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -6210,7 +4950,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="182"
+									VALUE="180"
 									OWNER_FILE=""
 								}
 
@@ -6278,19 +5018,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (31)
+		TYPEOF TASK (106)
 		{
-			IS_EXPANDED="1"
-			LABEL="Dot 18"
+			LABEL="OFF Dot 41"
 			TASK_KIND="0"
 
-			TYPEOF TASK (34)
+			TYPEOF TASK (108)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (73)
+				TYPEOF RULE (149)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -6332,13 +5071,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (32)
+			TYPEOF TASK (107)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (72)
+				TYPEOF RULE (148)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -6373,14 +5112,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="22.6"
+							VALUE="11.92"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="61.1"
+							VALUE="60.99"
 							OWNER_FILE=""
 						}
 
@@ -6440,7 +5179,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (70)
+				TYPEOF RULE (147)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -6525,7 +5264,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (49)
+				TYPEOF RULE (146)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -6624,19 +5363,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (28)
+		TYPEOF TASK (109)
 		{
-			IS_EXPANDED="1"
-			LABEL="Dot 19"
+			LABEL="OFF Dot 42"
 			TASK_KIND="0"
 
-			TYPEOF TASK (30)
+			TYPEOF TASK (111)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (48)
+				TYPEOF RULE (153)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -6678,13 +5416,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (29)
+			TYPEOF TASK (110)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (47)
+				TYPEOF RULE (152)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -6719,14 +5457,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="25.6"
+							VALUE="11.92"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="56.3"
+							VALUE="60.99"
 							OWNER_FILE=""
 						}
 
@@ -6786,7 +5524,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (30)
+				TYPEOF RULE (151)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -6871,7 +5609,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (29)
+				TYPEOF RULE (150)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -6970,19 +5708,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (25)
+		TYPEOF TASK (112)
 		{
-			IS_EXPANDED="1"
-			LABEL="Dot 20"
+			LABEL="OFF Dot 43"
 			TASK_KIND="0"
 
-			TYPEOF TASK (27)
+			TYPEOF TASK (114)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (26)
+				TYPEOF RULE (157)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -7005,7 +5742,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="216"
+							VALUE="210"
 							OWNER_FILE=""
 						}
 					}
@@ -7024,13 +5761,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (26)
+			TYPEOF TASK (113)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (25)
+				TYPEOF RULE (156)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -7053,7 +5790,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="216"
+							VALUE="210"
 							OWNER_FILE=""
 						}
 					}
@@ -7065,14 +5802,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="25.6"
+							VALUE="11.92"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="56.3"
+							VALUE="60.99"
 							OWNER_FILE=""
 						}
 
@@ -7132,7 +5869,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (24)
+				TYPEOF RULE (155)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -7217,7 +5954,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (23)
+				TYPEOF RULE (154)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -7248,7 +5985,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="216"
+									VALUE="210"
 									OWNER_FILE=""
 								}
 
@@ -7316,19 +6053,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (10)
+		TYPEOF TASK (115)
 		{
-			IS_EXPANDED="1"
-			LABEL="Dot 21"
+			LABEL="OFF Dot 44"
 			TASK_KIND="0"
 
-			TYPEOF TASK (20)
+			TYPEOF TASK (117)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (9)
+				TYPEOF RULE (161)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -7351,7 +6087,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="228"
+							VALUE="220"
 							OWNER_FILE=""
 						}
 					}
@@ -7370,13 +6106,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (12)
+			TYPEOF TASK (116)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (8)
+				TYPEOF RULE (160)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -7399,7 +6135,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="228"
+							VALUE="220"
 							OWNER_FILE=""
 						}
 					}
@@ -7411,14 +6147,13338 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="8.6"
+							VALUE="11.92"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="56.6"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (159)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (158)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="220"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (118)
+		{
+			LABEL="OFF Dot 45"
+			TASK_KIND="0"
+
+			TYPEOF TASK (120)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (165)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="230"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (119)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (164)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="230"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="11.92"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (163)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (162)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="230"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (121)
+		{
+			LABEL="OFF Dot 46"
+			TASK_KIND="0"
+
+			TYPEOF TASK (123)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (169)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="240"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (122)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (168)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="240"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="11.92"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (167)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (166)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="240"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (127)
+		{
+			LABEL="OFF Dot 47"
+			TASK_KIND="0"
+
+			TYPEOF TASK (129)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (177)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="250"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (128)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (176)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="250"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="11.92"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (175)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (174)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="250"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (130)
+		{
+			LABEL="OFF Dot 48"
+			TASK_KIND="0"
+
+			TYPEOF TASK (132)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (181)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="260"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (131)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (180)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="260"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="11.92"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (179)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (178)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="260"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (133)
+		{
+			LABEL="OFF Dot 49"
+			TASK_KIND="0"
+
+			TYPEOF TASK (135)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (185)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="270"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (134)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (184)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="270"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="11.92"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (183)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (182)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="270"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (136)
+		{
+			LABEL="OFF Dot 50"
+			TASK_KIND="0"
+
+			TYPEOF TASK (138)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (189)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="280"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (137)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (188)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="280"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="11.92"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (187)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (186)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="280"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (139)
+		{
+			LABEL="OFF Dot 51"
+			TASK_KIND="0"
+
+			TYPEOF TASK (141)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (193)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="290"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (140)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (192)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="290"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="11.92"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (191)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (190)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="290"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (142)
+		{
+			LABEL="OFF Dot 52"
+			TASK_KIND="0"
+
+			TYPEOF TASK (144)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (197)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="300"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (143)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (196)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="300"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="11.92"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (195)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (194)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="300"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (145)
+		{
+			LABEL="OFF Dot 53"
+			TASK_KIND="0"
+
+			TYPEOF TASK (147)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (201)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="310"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (146)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (200)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="310"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="11.92"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (199)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (198)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="310"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (90)
+		{
+			LABEL="Next block start time"
+			TASK_KIND="0"
+
+			TYPEOF RULE (125)
+			{
+				IS_EXPANDED="1"
+				LABEL="Rule: Go to next task"
+
+				TYPEOF CONDITION (SUPERIOR)
+				{
+					IS_EXPANDED="1"
+					MODIFIER="BECOMES_TRUE"
+
+					TYPEOF PARAMETER (OPERAND_1)
+					{
+						KIND="FUNCTION"
+
+						TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+						{
+						}
+						OWNER_FILE=""
+					}
+
+					TYPEOF PARAMETER (OPERAND_2)
+					{
+						KIND="USER"
+						VALUE="390.0"
+						OWNER_FILE=""
+					}
+				}
+
+				TYPEOF ACTION (GOTO_TASK)
+				{
+					IS_EXPANDED="1"
+
+					TYPEOF PARAMETER (TASK_NUMBER)
+					{
+						KIND="ENUM"
+						VALUE="GOTO_NEXT_TASK"
+						OWNER_FILE=""
+					}
+				}
+			}
+		}
+	}
+
+	TYPEOF TASK (72)
+	{
+		LABEL="Instructions INT ON"
+		TASK_KIND="0"
+
+		TYPEOF RULE (124)
+		{
+			IS_EXPANDED="1"
+			LABEL="Rule: "
+
+			TYPEOF CONDITION (SUPERIOR)
+			{
+				IS_EXPANDED="1"
+				MODIFIER="BECOMES_TRUE"
+
+				TYPEOF PARAMETER (OPERAND_1)
+				{
+					KIND="FUNCTION"
+
+					TYPEOF FUNCTION (GET_TASK_CLOCK)
+					{
+					}
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (OPERAND_2)
+				{
+					KIND="USER"
+					VALUE="2"
+					OWNER_FILE=""
+				}
+			}
+
+			TYPEOF ACTION (SET_IMAGE)
+			{
+				IS_EXPANDED="1"
+
+				TYPEOF PARAMETER (SCREEN_XPOSITION)
+				{
+					KIND="USER"
+					VALUE="25"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (SCREEN_YPOSITION)
+				{
+					KIND="USER"
+					VALUE="25"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+				{
+					KIND="USER"
+					VALUE="50"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+				{
+					KIND="USER"
+					VALUE="70"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (IMAGE_FILENAME)
+				{
+					KIND="FILE"
+					VALUE="AQ Exp Int block.PNG"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (CHANNEL_NAME)
+				{
+					KIND="USER"
+					VALUE="VISUAL_TRIPLEHEAD:1.1"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (DISPLAY_TIME)
+				{
+					KIND="USER"
+					VALUE="18"
+					OWNER_FILE=""
+				}
+			}
+		}
+
+		TYPEOF RULE (123)
+		{
+			IS_EXPANDED="1"
+			LABEL="Rule"
+
+			TYPEOF CONDITION (SUPERIOR)
+			{
+				IS_EXPANDED="1"
+				MODIFIER="BECOMES_TRUE"
+
+				TYPEOF PARAMETER (OPERAND_1)
+				{
+					KIND="FUNCTION"
+
+					TYPEOF FUNCTION (GET_TASK_CLOCK)
+					{
+					}
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (OPERAND_2)
+				{
+					KIND="USER"
+					VALUE="20"
+					OWNER_FILE=""
+				}
+			}
+
+			TYPEOF ACTION (GOTO_TASK)
+			{
+				IS_EXPANDED="1"
+
+				TYPEOF PARAMETER (TASK_NUMBER)
+				{
+					KIND="ENUM"
+					VALUE="GOTO_NEXT_TASK"
+					OWNER_FILE=""
+				}
+			}
+		}
+	}
+
+	TYPEOF TASK (220)
+	{
+		LABEL="INT ON"
+		TASK_KIND="0"
+
+		TYPEOF RULE (297)
+		{
+			IS_EXPANDED="1"
+			LABEL="Display int-ON"
+
+			TYPEOF CONDITION (SUPEQUAL)
+			{
+				IS_EXPANDED="1"
+				MODIFIER="BECOMES_TRUE"
+
+				TYPEOF PARAMETER (CLOCK)
+				{
+					KIND="FUNCTION"
+
+					TYPEOF FUNCTION (GET_TASK_CLOCK)
+					{
+					}
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (CLOCK)
+				{
+					KIND="USER"
+					VALUE="10"
+					OWNER_FILE=""
+				}
+			}
+
+			TYPEOF ACTION (SET_IMAGE)
+			{
+				IS_EXPANDED="1"
+
+				TYPEOF PARAMETER (SCREEN_XPOSITION)
+				{
+					KIND="USER"
+					VALUE="0"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (SCREEN_YPOSITION)
+				{
+					KIND="USER"
+					VALUE="0"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+				{
+					KIND="USER"
+					VALUE="8.33333"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+				{
+					KIND="USER"
+					VALUE="5.37"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (IMAGE_FILENAME)
+				{
+					KIND="FILE"
+					VALUE="int-ON.png"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (CHANNEL_NAME)
+				{
+					KIND="USER"
+					VALUE="VISUAL_TRIPLEHEAD:1.2"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (DISPLAY_TIME)
+				{
+					KIND="USER"
+					VALUE="0"
+					OWNER_FILE=""
+				}
+			}
+
+			TYPEOF ACTION (ADD_TO_VARIABLE)
+			{
+				IS_EXPANDED="1"
+
+				TYPEOF PARAMETER (VARIABLE_NAME)
+				{
+					KIND="VARIABLE"
+					VALUE="50"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (FLOAT_VALUE)
+				{
+					KIND="USER"
+					VALUE="1"
+					OWNER_FILE=""
+				}
+			}
+		}
+
+		TYPEOF RULE (298)
+		{
+			IS_EXPANDED="1"
+			LABEL="Remove int-ON"
+
+			TYPEOF CONDITION (SUPEQUAL)
+			{
+				IS_EXPANDED="1"
+				MODIFIER="BECOMES_TRUE"
+
+				TYPEOF PARAMETER (CLOCK)
+				{
+					KIND="FUNCTION"
+
+					TYPEOF FUNCTION (GET_TASK_CLOCK)
+					{
+					}
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (CLOCK)
+				{
+					KIND="USER"
+					VALUE="15"
+					OWNER_FILE=""
+				}
+			}
+
+			TYPEOF ACTION (SET_IMAGE_REMOVE)
+			{
+				IS_EXPANDED="1"
+
+				TYPEOF PARAMETER (IMAGE_FILENAME)
+				{
+					KIND="FILE"
+					VALUE="int-ON.png"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (CHANNEL_NAME)
+				{
+					KIND="USER"
+					VALUE="VISUAL_TRIPLEHEAD:1.2"
+					OWNER_FILE=""
+				}
+			}
+
+			TYPEOF ACTION (ADD_TO_VARIABLE)
+			{
+				IS_EXPANDED="1"
+
+				TYPEOF PARAMETER (VARIABLE_NAME)
+				{
+					KIND="VARIABLE"
+					VALUE="50"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (FLOAT_VALUE)
+				{
+					KIND="USER"
+					VALUE="-1"
+					OWNER_FILE=""
+				}
+			}
+
+			TYPEOF ACTION (GOTO_TASK)
+			{
+				IS_EXPANDED="1"
+
+				TYPEOF PARAMETER (TASK_NUMBER)
+				{
+					KIND="ENUM"
+					VALUE="GOTO_NEXT_TASK"
+					OWNER_FILE=""
+				}
+			}
+		}
+	}
+
+	TYPEOF TASK (170)
+	{
+		LABEL="PDT INT ON"
+		TASK_KIND="0"
+
+		TYPEOF TASK (172)
+		{
+			LABEL="ON Dot 54"
+			TASK_KIND="0"
+
+			TYPEOF TASK (174)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (236)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="450"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (173)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (235)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="450"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (234)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (233)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="450"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (205)
+		{
+			LABEL="ON Dot 55"
+			TASK_KIND="0"
+
+			TYPEOF TASK (207)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (280)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="460"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (206)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (279)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="460"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (278)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (277)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="460"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (315)
+		{
+			LABEL="ON Dot 56"
+			TASK_KIND="0"
+
+			TYPEOF TASK (317)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (425)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="470"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (316)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (424)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="470"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (423)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (422)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="470"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (318)
+		{
+			LABEL="ON Dot 57"
+			TASK_KIND="0"
+
+			TYPEOF TASK (320)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (429)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="480"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (319)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (428)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="480"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (427)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (426)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="480"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (321)
+		{
+			LABEL="ON Dot 58"
+			TASK_KIND="0"
+
+			TYPEOF TASK (323)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (433)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="490"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (322)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (432)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="490"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (431)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (430)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="490"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (324)
+		{
+			LABEL="ON Dot 59"
+			TASK_KIND="0"
+
+			TYPEOF TASK (326)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (437)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="500"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (325)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (436)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="500"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (435)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (434)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="500"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (327)
+		{
+			LABEL="ON Dot 60"
+			TASK_KIND="0"
+
+			TYPEOF TASK (329)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (441)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="510"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (328)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (440)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="510"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (439)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (438)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="510"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (330)
+		{
+			LABEL="ON Dot 61"
+			TASK_KIND="0"
+
+			TYPEOF TASK (332)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (445)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="520"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (331)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (444)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="520"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (443)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (442)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="520"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (333)
+		{
+			LABEL="ON Dot 62"
+			TASK_KIND="0"
+
+			TYPEOF TASK (335)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (449)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="530"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (334)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (448)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="530"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (447)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (446)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="530"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (175)
+		{
+			LABEL="ON Dot 63"
+			TASK_KIND="0"
+
+			TYPEOF TASK (177)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (240)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="540"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (176)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (239)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="540"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (238)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (237)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="540"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (178)
+		{
+			LABEL="ON Dot 64"
+			TASK_KIND="0"
+
+			TYPEOF TASK (180)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (244)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="550"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (179)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (243)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="550"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (242)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (241)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="550"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (181)
+		{
+			LABEL="ON Dot 65"
+			TASK_KIND="0"
+
+			TYPEOF TASK (183)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (248)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="560.0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (182)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (247)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="560.0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (246)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (245)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="560.0"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (184)
+		{
+			LABEL="ON Dot 66"
+			TASK_KIND="0"
+
+			TYPEOF TASK (186)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (252)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="570"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (185)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (251)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="570"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (250)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (249)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="570"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (187)
+		{
+			LABEL="ON Dot 67"
+			TASK_KIND="0"
+
+			TYPEOF TASK (189)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (256)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="580"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (188)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (255)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="580"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (254)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (253)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="580"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (190)
+		{
+			LABEL="ON Dot 68"
+			TASK_KIND="0"
+
+			TYPEOF TASK (192)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (260)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="590"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (191)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (259)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="590"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (258)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (257)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="590"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (193)
+		{
+			LABEL="ON Dot 69"
+			TASK_KIND="0"
+
+			TYPEOF TASK (195)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (264)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="600"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (194)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (263)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="600"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (262)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (261)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="600"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (196)
+		{
+			LABEL="ON Dot 70"
+			TASK_KIND="0"
+
+			TYPEOF TASK (198)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (268)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="610"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (197)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (267)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="610"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (266)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (265)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="610"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (199)
+		{
+			LABEL="ON Dot 71"
+			TASK_KIND="0"
+
+			TYPEOF TASK (201)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (272)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="620"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (200)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (271)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="620"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="23.99"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="57.53"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (270)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (269)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="620"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (202)
+		{
+			LABEL="ON Dot 72"
+			TASK_KIND="0"
+
+			TYPEOF TASK (204)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (276)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="630"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (203)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (275)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="630"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="30.5"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.19"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (274)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (273)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="630"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (208)
+		{
+			LABEL="ON Dot 73"
+			TASK_KIND="0"
+
+			TYPEOF TASK (210)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (284)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="640"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (209)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (283)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="640"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="25.25"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="61.61"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (282)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (281)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="640"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (211)
+		{
+			LABEL="ON Dot 74"
+			TASK_KIND="0"
+
+			TYPEOF TASK (213)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (288)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="650"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (212)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (287)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="650"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.72"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.41"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (286)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (285)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="650"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (214)
+		{
+			LABEL="ON Dot 75"
+			TASK_KIND="0"
+
+			TYPEOF TASK (216)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (292)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="660"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (215)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (291)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="660"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="16.42"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="60.42"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (290)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (289)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="660"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (217)
+		{
+			LABEL="ON Dot 76"
+			TASK_KIND="0"
+
+			TYPEOF TASK (219)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (296)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="670"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (218)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (295)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="670"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="17.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="57.13"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (294)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (293)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="670"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (303)
+		{
+			LABEL="ON Dot 77"
+			TASK_KIND="0"
+
+			TYPEOF TASK (305)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (409)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="680"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (304)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (408)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="680"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="9.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="56.49"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (407)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (406)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="680"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (306)
+		{
+			LABEL="ON Dot 78"
+			TASK_KIND="0"
+
+			TYPEOF TASK (308)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (413)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="690"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (307)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (412)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="690"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="10.53"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.07"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (411)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (410)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="690"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (309)
+		{
+			LABEL="ON Dot 79"
+			TASK_KIND="0"
+
+			TYPEOF TASK (311)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (417)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="700"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (310)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (416)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="700"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="29.76"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (415)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (414)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="700"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (312)
+		{
+			LABEL="ON Dot 80"
+			TASK_KIND="0"
+
+			TYPEOF TASK (314)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (421)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="710"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (313)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (420)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="710"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="12.21"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="62.51"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (419)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (418)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="710"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (171)
+		{
+			LABEL="Next Int start time"
+			TASK_KIND="0"
+
+			TYPEOF RULE (232)
+			{
+				IS_EXPANDED="1"
+				LABEL="Rule: Go to next task"
+
+				TYPEOF CONDITION (SUPERIOR)
+				{
+					IS_EXPANDED="1"
+					MODIFIER="BECOMES_TRUE"
+
+					TYPEOF PARAMETER (OPERAND_1)
+					{
+						KIND="FUNCTION"
+
+						TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+						{
+						}
+						OWNER_FILE=""
+					}
+
+					TYPEOF PARAMETER (OPERAND_2)
+					{
+						KIND="USER"
+						VALUE="775"
+						OWNER_FILE=""
+					}
+				}
+
+				TYPEOF ACTION (GOTO_TASK)
+				{
+					IS_EXPANDED="1"
+
+					TYPEOF PARAMETER (TASK_NUMBER)
+					{
+						KIND="ENUM"
+						VALUE="GOTO_NEXT_TASK"
+						OWNER_FILE=""
+					}
+				}
+			}
+		}
+	}
+
+	TYPEOF TASK (70)
+	{
+		LABEL="Instructions INT OFF"
+		TASK_KIND="0"
+
+		TYPEOF RULE (13)
+		{
+			IS_EXPANDED="1"
+			LABEL="Rule: "
+
+			TYPEOF CONDITION (SUPERIOR)
+			{
+				IS_EXPANDED="1"
+				MODIFIER="BECOMES_TRUE"
+
+				TYPEOF PARAMETER (OPERAND_1)
+				{
+					KIND="FUNCTION"
+
+					TYPEOF FUNCTION (GET_TASK_CLOCK)
+					{
+					}
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (OPERAND_2)
+				{
+					KIND="USER"
+					VALUE="2"
+					OWNER_FILE=""
+				}
+			}
+
+			TYPEOF ACTION (SET_IMAGE)
+			{
+				IS_EXPANDED="1"
+
+				TYPEOF PARAMETER (SCREEN_XPOSITION)
+				{
+					KIND="USER"
+					VALUE="25"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (SCREEN_YPOSITION)
+				{
+					KIND="USER"
+					VALUE="25"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+				{
+					KIND="USER"
+					VALUE="50"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+				{
+					KIND="USER"
+					VALUE="70"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (IMAGE_FILENAME)
+				{
+					KIND="FILE"
+					VALUE="AQ Exp NO Int block.PNG"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (CHANNEL_NAME)
+				{
+					KIND="USER"
+					VALUE="VISUAL_TRIPLEHEAD:1.1"
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (DISPLAY_TIME)
+				{
+					KIND="USER"
+					VALUE="18"
+					OWNER_FILE=""
+				}
+			}
+		}
+
+		TYPEOF RULE (12)
+		{
+			LABEL="Rule"
+
+			TYPEOF CONDITION (SUPERIOR)
+			{
+				IS_EXPANDED="1"
+				MODIFIER="BECOMES_TRUE"
+
+				TYPEOF PARAMETER (OPERAND_1)
+				{
+					KIND="FUNCTION"
+
+					TYPEOF FUNCTION (GET_TASK_CLOCK)
+					{
+					}
+					OWNER_FILE=""
+				}
+
+				TYPEOF PARAMETER (OPERAND_2)
+				{
+					KIND="USER"
+					VALUE="20"
+					OWNER_FILE=""
+				}
+			}
+
+			TYPEOF ACTION (GOTO_TASK)
+			{
+				IS_EXPANDED="1"
+
+				TYPEOF PARAMETER (TASK_NUMBER)
+				{
+					KIND="ENUM"
+					VALUE="GOTO_NEXT_TASK"
+					OWNER_FILE=""
+				}
+			}
+		}
+	}
+
+	TYPEOF TASK (222)
+	{
+		IS_EXPANDED="1"
+		LABEL="INT OFF"
+		TASK_KIND="0"
+	}
+
+	TYPEOF TASK (0)
+	{
+		LABEL="PDT INT OFF"
+		TASK_KIND="0"
+
+		TYPEOF TASK (3)
+		{
+			LABEL="OFF Dot 54"
+			TASK_KIND="0"
+
+			TYPEOF TASK (6)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (6)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="830"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (5)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (5)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="830"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
 							OWNER_FILE=""
 						}
 
@@ -7594,7 +19654,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="228"
+									VALUE="830"
 									OWNER_FILE=""
 								}
 
@@ -7662,19 +19722,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (65)
+		TYPEOF TASK (7)
 		{
-			IS_EXPANDED="1"
-			LABEL="Dot 22"
+			LABEL="OFF Dot 55"
 			TASK_KIND="0"
 
-			TYPEOF TASK (67)
+			TYPEOF TASK (9)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (180)
+				TYPEOF RULE (14)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -7697,7 +19756,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="234"
+							VALUE="840"
 							OWNER_FILE=""
 						}
 					}
@@ -7716,13 +19775,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (66)
+			TYPEOF TASK (8)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (179)
+				TYPEOF RULE (9)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -7745,7 +19804,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="234"
+							VALUE="840"
 							OWNER_FILE=""
 						}
 					}
@@ -7757,14 +19816,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="14.6"
+							VALUE="20.71"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="62.3"
+							VALUE="59.95"
 							OWNER_FILE=""
 						}
 
@@ -7824,7 +19883,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (178)
+				TYPEOF RULE (8)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -7909,7 +19968,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (177)
+				TYPEOF RULE (7)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -7940,7 +19999,4147 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="234"
+									VALUE="840"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (10)
+		{
+			LABEL="OFF Dot 56"
+			TASK_KIND="0"
+
+			TYPEOF TASK (12)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (18)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="850"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (11)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (17)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="850"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (16)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (15)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="850"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (13)
+		{
+			LABEL="OFF Dot 57"
+			TASK_KIND="0"
+
+			TYPEOF TASK (15)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (22)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="860"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (14)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (21)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="860"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (20)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (19)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="860"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (16)
+		{
+			LABEL="OFF Dot 58"
+			TASK_KIND="0"
+
+			TYPEOF TASK (18)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (26)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="870"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (17)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (25)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="870"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (24)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (23)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="870"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (19)
+		{
+			LABEL="OFF Dot 59"
+			TASK_KIND="0"
+
+			TYPEOF TASK (21)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (30)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="880"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (20)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (29)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="880"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (28)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (27)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="880"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (22)
+		{
+			LABEL="OFF Dot 60"
+			TASK_KIND="0"
+
+			TYPEOF TASK (24)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (34)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="890"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (23)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (33)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="890"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (32)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (31)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="890"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (25)
+		{
+			LABEL="OFF Dot 61"
+			TASK_KIND="0"
+
+			TYPEOF TASK (27)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (38)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="900"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (26)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (37)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="900"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (36)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (35)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="900"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (28)
+		{
+			LABEL="OFF Dot 62"
+			TASK_KIND="0"
+
+			TYPEOF TASK (30)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (42)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="910"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (29)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (41)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="910"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (40)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (39)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="910"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (31)
+		{
+			LABEL="OFF Dot 63"
+			TASK_KIND="0"
+
+			TYPEOF TASK (33)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (46)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="920"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (32)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (45)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="920"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (44)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (43)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="920"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (34)
+		{
+			LABEL="OFF Dot 64"
+			TASK_KIND="0"
+
+			TYPEOF TASK (36)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (50)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="930"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (35)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (49)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="930"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (48)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (47)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="930"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (37)
+		{
+			LABEL="OFF Dot 65"
+			TASK_KIND="0"
+
+			TYPEOF TASK (39)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (54)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="940"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (38)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (53)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="940"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (52)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (51)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="940"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (40)
+		{
+			LABEL="OFF Dot 66"
+			TASK_KIND="0"
+
+			TYPEOF TASK (42)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (58)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="950"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (41)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (57)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="950"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (56)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (55)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="950"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (43)
+		{
+			LABEL="OFF Dot 67"
+			TASK_KIND="0"
+
+			TYPEOF TASK (45)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (62)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="960"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (44)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (61)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="960"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (60)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (59)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="960"
 									OWNER_FILE=""
 								}
 
@@ -8010,256 +24209,16 @@ TYPEOF SCENARIO (0)
 
 		TYPEOF TASK (46)
 		{
-			LABEL="Next Int start time"
+			LABEL="OFF Dot 68"
 			TASK_KIND="0"
 
-			TYPEOF RULE (137)
-			{
-				IS_EXPANDED="1"
-				LABEL="Rule: Go to next task"
-
-				TYPEOF CONDITION (SUPERIOR)
-				{
-					IS_EXPANDED="1"
-					MODIFIER="BECOMES_TRUE"
-
-					TYPEOF PARAMETER (OPERAND_1)
-					{
-						KIND="FUNCTION"
-
-						TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-						{
-						}
-						OWNER_FILE=""
-					}
-
-					TYPEOF PARAMETER (OPERAND_2)
-					{
-						KIND="USER"
-						VALUE="240"
-						OWNER_FILE=""
-					}
-				}
-
-				TYPEOF ACTION (GOTO_TASK)
-				{
-					IS_EXPANDED="1"
-
-					TYPEOF PARAMETER (TASK_NUMBER)
-					{
-						KIND="ENUM"
-						VALUE="GOTO_NEXT_TASK"
-						OWNER_FILE=""
-					}
-				}
-			}
-		}
-	}
-
-	TYPEOF TASK (47)
-	{
-		LABEL="INT 6"
-		TASK_KIND="0"
-
-		TYPEOF RULE (138)
-		{
-			IS_EXPANDED="1"
-			LABEL="Display int-ON"
-
-			TYPEOF CONDITION (SUPEQUAL)
-			{
-				IS_EXPANDED="1"
-				MODIFIER="BECOMES_TRUE"
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="FUNCTION"
-
-					TYPEOF FUNCTION (GET_TASK_CLOCK)
-					{
-					}
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (SET_IMAGE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (SCREEN_XPOSITION)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_YPOSITION)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-				{
-					KIND="USER"
-					VALUE="8.33333"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-				{
-					KIND="USER"
-					VALUE="5.37"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (IMAGE_FILENAME)
-				{
-					KIND="FILE"
-					VALUE="int-ON.png"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CHANNEL_NAME)
-				{
-					KIND="USER"
-					VALUE="VISUAL_TRIPLEHEAD:1.2"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (DISPLAY_TIME)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (ADD_TO_VARIABLE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (VARIABLE_NAME)
-				{
-					KIND="VARIABLE"
-					VALUE="50"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (FLOAT_VALUE)
-				{
-					KIND="USER"
-					VALUE="1"
-					OWNER_FILE=""
-				}
-			}
-		}
-
-		TYPEOF RULE (139)
-		{
-			IS_EXPANDED="1"
-			LABEL="Remove int-ON"
-
-			TYPEOF CONDITION (SUPEQUAL)
-			{
-				IS_EXPANDED="1"
-				MODIFIER="BECOMES_TRUE"
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="FUNCTION"
-
-					TYPEOF FUNCTION (GET_TASK_CLOCK)
-					{
-					}
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="USER"
-					VALUE="5"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (SET_IMAGE_REMOVE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (IMAGE_FILENAME)
-				{
-					KIND="FILE"
-					VALUE="int-ON.png"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CHANNEL_NAME)
-				{
-					KIND="USER"
-					VALUE="VISUAL_TRIPLEHEAD:1.2"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (ADD_TO_VARIABLE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (VARIABLE_NAME)
-				{
-					KIND="VARIABLE"
-					VALUE="50"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (FLOAT_VALUE)
-				{
-					KIND="USER"
-					VALUE="-1"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (GOTO_TASK)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (TASK_NUMBER)
-				{
-					KIND="ENUM"
-					VALUE="GOTO_NEXT_TASK"
-					OWNER_FILE=""
-				}
-			}
-		}
-	}
-
-	TYPEOF TASK (5)
-	{
-		LABEL="PDT post-INT 6"
-		TASK_KIND="0"
-
-		TYPEOF TASK (303)
-		{
-			LABEL="Dot 23"
-			TASK_KIND="0"
-
-			TYPEOF TASK (304)
+			TYPEOF TASK (48)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (404)
+				TYPEOF RULE (70)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -8282,7 +24241,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="302"
+							VALUE="970"
 							OWNER_FILE=""
 						}
 					}
@@ -8301,13 +24260,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (305)
+			TYPEOF TASK (47)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (407)
+				TYPEOF RULE (65)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -8330,7 +24289,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="302"
+							VALUE="970"
 							OWNER_FILE=""
 						}
 					}
@@ -8342,4629 +24301,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="20.41"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="58.53"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (405)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (406)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="302"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (306)
-		{
-			LABEL="Dot 24"
-			TASK_KIND="0"
-
-			TYPEOF TASK (307)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (408)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="316"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (308)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (411)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="316"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="12.41"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="58.74"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (409)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (410)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="316"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (309)
-		{
-			LABEL="Dot 25"
-			TASK_KIND="0"
-
-			TYPEOF TASK (310)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (412)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="326"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (311)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (415)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="326"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="27.23"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="58.62"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (413)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (414)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="326"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (312)
-		{
-			LABEL="Dot 26"
-			TASK_KIND="0"
-
-			TYPEOF TASK (313)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (416)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="336"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (314)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (419)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="336"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="15.87"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="58.76"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (417)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (418)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="336"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (315)
-		{
-			LABEL="Dot 27"
-			TASK_KIND="0"
-
-			TYPEOF TASK (316)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (420)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="350"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (317)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (423)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="350"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="15.92"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="60.11"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (421)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (422)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="350"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (9)
-		{
-			LABEL="Next Int start time"
-			TASK_KIND="0"
-
-			TYPEOF RULE (22)
-			{
-				IS_EXPANDED="1"
-				LABEL="Rule: Go to next task"
-
-				TYPEOF CONDITION (SUPERIOR)
-				{
-					IS_EXPANDED="1"
-					MODIFIER="BECOMES_TRUE"
-
-					TYPEOF PARAMETER (OPERAND_1)
-					{
-						KIND="FUNCTION"
-
-						TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-						{
-						}
-						OWNER_FILE=""
-					}
-
-					TYPEOF PARAMETER (OPERAND_2)
-					{
-						KIND="USER"
-						VALUE="360.0"
-						OWNER_FILE=""
-					}
-				}
-
-				TYPEOF ACTION (GOTO_TASK)
-				{
-					IS_EXPANDED="1"
-
-					TYPEOF PARAMETER (TASK_NUMBER)
-					{
-						KIND="ENUM"
-						VALUE="GOTO_NEXT_TASK"
-						OWNER_FILE=""
-					}
-				}
-			}
-		}
-	}
-
-	TYPEOF TASK (4)
-	{
-		IS_EXPANDED="1"
-		LABEL="INT 7"
-		TASK_KIND="0"
-
-		TYPEOF RULE (12)
-		{
-			IS_EXPANDED="1"
-			LABEL="Display int-ON"
-
-			TYPEOF CONDITION (SUPEQUAL)
-			{
-				IS_EXPANDED="1"
-				MODIFIER="BECOMES_TRUE"
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="FUNCTION"
-
-					TYPEOF FUNCTION (GET_TASK_CLOCK)
-					{
-					}
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (SET_IMAGE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (SCREEN_XPOSITION)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_YPOSITION)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-				{
-					KIND="USER"
-					VALUE="8.33333"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-				{
-					KIND="USER"
-					VALUE="5.37"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (IMAGE_FILENAME)
-				{
-					KIND="FILE"
-					VALUE="int-ON.png"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CHANNEL_NAME)
-				{
-					KIND="USER"
-					VALUE="VISUAL_TRIPLEHEAD:1.2"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (DISPLAY_TIME)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (ADD_TO_VARIABLE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (VARIABLE_NAME)
-				{
-					KIND="VARIABLE"
-					VALUE="50"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (FLOAT_VALUE)
-				{
-					KIND="USER"
-					VALUE="1"
-					OWNER_FILE=""
-				}
-			}
-		}
-
-		TYPEOF RULE (13)
-		{
-			IS_EXPANDED="1"
-			LABEL="Remove int-ON"
-
-			TYPEOF CONDITION (SUPEQUAL)
-			{
-				IS_EXPANDED="1"
-				MODIFIER="BECOMES_TRUE"
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="FUNCTION"
-
-					TYPEOF FUNCTION (GET_TASK_CLOCK)
-					{
-					}
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="USER"
-					VALUE="5"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (SET_IMAGE_REMOVE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (IMAGE_FILENAME)
-				{
-					KIND="FILE"
-					VALUE="int-ON.png"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CHANNEL_NAME)
-				{
-					KIND="USER"
-					VALUE="VISUAL_TRIPLEHEAD:1.2"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (ADD_TO_VARIABLE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (VARIABLE_NAME)
-				{
-					KIND="VARIABLE"
-					VALUE="50"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (FLOAT_VALUE)
-				{
-					KIND="USER"
-					VALUE="-1"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (GOTO_TASK)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (TASK_NUMBER)
-				{
-					KIND="ENUM"
-					VALUE="GOTO_NEXT_TASK"
-					OWNER_FILE=""
-				}
-			}
-		}
-	}
-
-	TYPEOF TASK (35)
-	{
-		LABEL="PDT post-INT 7"
-		TASK_KIND="0"
-
-		TYPEOF TASK (318)
-		{
-			LABEL="Dot 28"
-			TASK_KIND="0"
-
-			TYPEOF TASK (319)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (424)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="426.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (320)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (427)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="426.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="10.79"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="59.25"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (425)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (426)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="426.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (321)
-		{
-			LABEL="Dot 29"
-			TASK_KIND="0"
-
-			TYPEOF TASK (322)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (428)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="432.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (323)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (431)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="432.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="20.87"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="59.05"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (429)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (430)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="432.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (324)
-		{
-			LABEL="Dot 30"
-			TASK_KIND="0"
-
-			TYPEOF TASK (325)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (432)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="438.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (326)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (435)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="438.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="15.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="57.78"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (433)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (434)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="438.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (327)
-		{
-			LABEL="Dot 31"
-			TASK_KIND="0"
-
-			TYPEOF TASK (328)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (436)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="448.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (329)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (439)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="448.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="13.52"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="59.8"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (437)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (438)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="448.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (330)
-		{
-			LABEL="Dot 32"
-			TASK_KIND="0"
-
-			TYPEOF TASK (331)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (440)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="460.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (332)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (443)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="460.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="25.36"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="61.57"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (441)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (442)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="460.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (333)
-		{
-			LABEL="Dot 33"
-			TASK_KIND="0"
-
-			TYPEOF TASK (334)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (444)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="466.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (335)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (447)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="466.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="12.01"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="60.08"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (445)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (446)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="466.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (336)
-		{
-			LABEL="Dot 34"
-			TASK_KIND="0"
-
-			TYPEOF TASK (337)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (448)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="472.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (338)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (451)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="472.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="15.63"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="56.84"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (449)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (450)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="472.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (58)
-		{
-			LABEL="Next Int start time"
-			TASK_KIND="0"
-
-			TYPEOF RULE (159)
-			{
-				IS_EXPANDED="1"
-				LABEL="Rule: Go to next task"
-
-				TYPEOF CONDITION (SUPERIOR)
-				{
-					IS_EXPANDED="1"
-					MODIFIER="BECOMES_TRUE"
-
-					TYPEOF PARAMETER (OPERAND_1)
-					{
-						KIND="FUNCTION"
-
-						TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-						{
-						}
-						OWNER_FILE=""
-					}
-
-					TYPEOF PARAMETER (OPERAND_2)
-					{
-						KIND="USER"
-						VALUE="480.0"
-						OWNER_FILE=""
-					}
-				}
-
-				TYPEOF ACTION (GOTO_TASK)
-				{
-					IS_EXPANDED="1"
-
-					TYPEOF PARAMETER (TASK_NUMBER)
-					{
-						KIND="ENUM"
-						VALUE="GOTO_NEXT_TASK"
-						OWNER_FILE=""
-					}
-				}
-			}
-		}
-	}
-
-	TYPEOF TASK (7)
-	{
-		LABEL="INT 8"
-		TASK_KIND="0"
-
-		TYPEOF RULE (14)
-		{
-			IS_EXPANDED="1"
-			LABEL="Display int-ON"
-
-			TYPEOF CONDITION (SUPEQUAL)
-			{
-				IS_EXPANDED="1"
-				MODIFIER="BECOMES_TRUE"
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="FUNCTION"
-
-					TYPEOF FUNCTION (GET_TASK_CLOCK)
-					{
-					}
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (SET_IMAGE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (SCREEN_XPOSITION)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_YPOSITION)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-				{
-					KIND="USER"
-					VALUE="8.33333"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-				{
-					KIND="USER"
-					VALUE="5.37"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (IMAGE_FILENAME)
-				{
-					KIND="FILE"
-					VALUE="int-ON.png"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CHANNEL_NAME)
-				{
-					KIND="USER"
-					VALUE="VISUAL_TRIPLEHEAD:1.1"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (DISPLAY_TIME)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (ADD_TO_VARIABLE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (VARIABLE_NAME)
-				{
-					KIND="VARIABLE"
-					VALUE="50"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (FLOAT_VALUE)
-				{
-					KIND="USER"
-					VALUE="1"
-					OWNER_FILE=""
-				}
-			}
-		}
-
-		TYPEOF RULE (18)
-		{
-			IS_EXPANDED="1"
-			LABEL="Remove int-ON"
-
-			TYPEOF CONDITION (SUPEQUAL)
-			{
-				IS_EXPANDED="1"
-				MODIFIER="BECOMES_TRUE"
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="FUNCTION"
-
-					TYPEOF FUNCTION (GET_TASK_CLOCK)
-					{
-					}
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="USER"
-					VALUE="5"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (SET_IMAGE_REMOVE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (IMAGE_FILENAME)
-				{
-					KIND="FILE"
-					VALUE="int-ON.png"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CHANNEL_NAME)
-				{
-					KIND="USER"
-					VALUE="VISUAL_TRIPLEHEAD:1.2"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (ADD_TO_VARIABLE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (VARIABLE_NAME)
-				{
-					KIND="VARIABLE"
-					VALUE="50"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (FLOAT_VALUE)
-				{
-					KIND="USER"
-					VALUE="-1"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (GOTO_TASK)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (TASK_NUMBER)
-				{
-					KIND="ENUM"
-					VALUE="GOTO_NEXT_TASK"
-					OWNER_FILE=""
-				}
-			}
-		}
-	}
-
-	TYPEOF TASK (62)
-	{
-		IS_EXPANDED="1"
-		LABEL="PDT post-INT 8"
-		TASK_KIND="0"
-
-		TYPEOF TASK (339)
-		{
-			LABEL="Dot 35"
-			TASK_KIND="0"
-
-			TYPEOF TASK (340)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (452)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="544.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (341)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (455)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="544.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="14.5"
+							VALUE="20.71"
 							OWNER_FILE=""
 						}
 
@@ -13031,7 +24368,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (453)
+				TYPEOF RULE (64)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -13116,7 +24453,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (454)
+				TYPEOF RULE (63)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -13147,7 +24484,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="544.0"
+									VALUE="970"
 									OWNER_FILE=""
 								}
 
@@ -13215,18 +24552,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (342)
+		TYPEOF TASK (49)
 		{
-			LABEL="Dot 36"
+			LABEL="OFF Dot 69"
 			TASK_KIND="0"
 
-			TYPEOF TASK (343)
+			TYPEOF TASK (52)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (456)
+				TYPEOF RULE (75)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -13249,7 +24586,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="560.0"
+							VALUE="980"
 							OWNER_FILE=""
 						}
 					}
@@ -13268,13 +24605,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (344)
+			TYPEOF TASK (50)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (459)
+				TYPEOF RULE (74)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -13297,7 +24634,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="560.0"
+							VALUE="980"
 							OWNER_FILE=""
 						}
 					}
@@ -13309,14 +24646,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="13.96"
+							VALUE="20.71"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="57.9"
+							VALUE="59.95"
 							OWNER_FILE=""
 						}
 
@@ -13376,7 +24713,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (457)
+				TYPEOF RULE (73)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -13461,7 +24798,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (458)
+				TYPEOF RULE (72)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -13492,7 +24829,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="560.0"
+									VALUE="980"
 									OWNER_FILE=""
 								}
 
@@ -13560,18 +24897,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (345)
+		TYPEOF TASK (53)
 		{
-			LABEL="Dot 37"
+			LABEL="OFF Dot 70"
 			TASK_KIND="0"
 
-			TYPEOF TASK (346)
+			TYPEOF TASK (55)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (460)
+				TYPEOF RULE (80)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -13594,7 +24931,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="570.0"
+							VALUE="990"
 							OWNER_FILE=""
 						}
 					}
@@ -13613,13 +24950,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (347)
+			TYPEOF TASK (54)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (463)
+				TYPEOF RULE (79)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -13642,7 +24979,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="570.0"
+							VALUE="990"
 							OWNER_FILE=""
 						}
 					}
@@ -13654,14 +24991,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="21.55"
+							VALUE="20.71"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="56.89"
+							VALUE="59.95"
 							OWNER_FILE=""
 						}
 
@@ -13721,7 +25058,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (461)
+				TYPEOF RULE (78)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -13806,7 +25143,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (462)
+				TYPEOF RULE (76)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -13837,7 +25174,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="570.0"
+									VALUE="990"
 									OWNER_FILE=""
 								}
 
@@ -13905,18 +25242,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (348)
+		TYPEOF TASK (56)
 		{
-			LABEL="Dot 38"
+			LABEL="OFF Dot 71"
 			TASK_KIND="0"
 
-			TYPEOF TASK (349)
+			TYPEOF TASK (58)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (464)
+				TYPEOF RULE (84)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -13939,7 +25276,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="578.0"
+							VALUE="1000"
 							OWNER_FILE=""
 						}
 					}
@@ -13958,13 +25295,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (350)
+			TYPEOF TASK (57)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (467)
+				TYPEOF RULE (83)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -13987,7 +25324,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="578.0"
+							VALUE="1000"
 							OWNER_FILE=""
 						}
 					}
@@ -13999,14 +25336,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="15.92"
+							VALUE="20.71"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="61.35"
+							VALUE="59.95"
 							OWNER_FILE=""
 						}
 
@@ -14066,7 +25403,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (465)
+				TYPEOF RULE (82)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -14151,7 +25488,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (466)
+				TYPEOF RULE (81)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -14182,7 +25519,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="578.0"
+									VALUE="1000"
 									OWNER_FILE=""
 								}
 
@@ -14250,18 +25587,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (351)
+		TYPEOF TASK (59)
 		{
-			LABEL="Dot 39"
+			LABEL="OFF Dot 72"
 			TASK_KIND="0"
 
-			TYPEOF TASK (352)
+			TYPEOF TASK (61)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (468)
+				TYPEOF RULE (88)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -14284,7 +25621,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="594.0"
+							VALUE="1010"
 							OWNER_FILE=""
 						}
 					}
@@ -14303,13 +25640,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (353)
+			TYPEOF TASK (60)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (471)
+				TYPEOF RULE (87)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -14332,7 +25669,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="594.0"
+							VALUE="1010"
 							OWNER_FILE=""
 						}
 					}
@@ -14344,14 +25681,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="13.73"
+							VALUE="20.71"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="58.41"
+							VALUE="59.95"
 							OWNER_FILE=""
 						}
 
@@ -14411,7 +25748,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (469)
+				TYPEOF RULE (86)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -14496,7 +25833,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (470)
+				TYPEOF RULE (85)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -14527,7 +25864,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="594.0"
+									VALUE="1010"
 									OWNER_FILE=""
 								}
 
@@ -14595,18 +25932,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (354)
+		TYPEOF TASK (62)
 		{
-			LABEL="Dot 40"
+			LABEL="OFF Dot 73"
 			TASK_KIND="0"
 
-			TYPEOF TASK (355)
+			TYPEOF TASK (64)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (472)
+				TYPEOF RULE (92)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -14629,7 +25966,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="600.0"
+							VALUE="1020"
 							OWNER_FILE=""
 						}
 					}
@@ -14648,13 +25985,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (356)
+			TYPEOF TASK (63)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (475)
+				TYPEOF RULE (91)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -14677,7 +26014,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="600.0"
+							VALUE="1020"
 							OWNER_FILE=""
 						}
 					}
@@ -14689,14 +26026,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="24.86"
+							VALUE="20.71"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="59.33"
+							VALUE="59.95"
 							OWNER_FILE=""
 						}
 
@@ -14756,7 +26093,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (473)
+				TYPEOF RULE (90)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -14841,7 +26178,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (474)
+				TYPEOF RULE (89)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -14872,7 +26209,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="600.0"
+									VALUE="1020"
 									OWNER_FILE=""
 								}
 
@@ -14940,18 +26277,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (357)
+		TYPEOF TASK (65)
 		{
-			LABEL="Dot 41"
+			LABEL="OFF Dot 74"
 			TASK_KIND="0"
 
-			TYPEOF TASK (358)
+			TYPEOF TASK (67)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (476)
+				TYPEOF RULE (98)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -14974,7 +26311,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="614.0"
+							VALUE="1030"
 							OWNER_FILE=""
 						}
 					}
@@ -14993,13 +26330,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (359)
+			TYPEOF TASK (66)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (479)
+				TYPEOF RULE (97)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -15022,7 +26359,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="614.0"
+							VALUE="1030"
 							OWNER_FILE=""
 						}
 					}
@@ -15034,14 +26371,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="18.1"
+							VALUE="20.71"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="62.26"
+							VALUE="59.95"
 							OWNER_FILE=""
 						}
 
@@ -15101,7 +26438,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (477)
+				TYPEOF RULE (94)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -15186,7 +26523,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (478)
+				TYPEOF RULE (93)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -15217,7 +26554,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="614.0"
+									VALUE="1030"
 									OWNER_FILE=""
 								}
 
@@ -15285,18 +26622,18 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (360)
+		TYPEOF TASK (68)
 		{
-			LABEL="Dot 42"
+			LABEL="OFF Dot 75"
 			TASK_KIND="0"
 
-			TYPEOF TASK (361)
+			TYPEOF TASK (73)
 			{
 				IS_EXPANDED="1"
 				LABEL="Task: ISI"
 				TASK_KIND="0"
 
-				TYPEOF RULE (480)
+				TYPEOF RULE (102)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Go to subtask after Time seconds"
@@ -15319,7 +26656,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="624.0"
+							VALUE="1040"
 							OWNER_FILE=""
 						}
 					}
@@ -15338,13 +26675,13 @@ TYPEOF SCENARIO (0)
 				}
 			}
 
-			TYPEOF TASK (362)
+			TYPEOF TASK (71)
 			{
 				IS_EXPANDED="1"
 				LABEL="Dot display"
 				TASK_KIND="0"
 
-				TYPEOF RULE (483)
+				TYPEOF RULE (101)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn on image"
@@ -15367,7 +26704,7 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (OPERAND_2)
 						{
 							KIND="USER"
-							VALUE="624.0"
+							VALUE="1040"
 							OWNER_FILE=""
 						}
 					}
@@ -15379,14 +26716,14 @@ TYPEOF SCENARIO (0)
 						TYPEOF PARAMETER (SCREEN_XPOSITION)
 						{
 							KIND="USER"
-							VALUE="26.78"
+							VALUE="20.71"
 							OWNER_FILE=""
 						}
 
 						TYPEOF PARAMETER (SCREEN_YPOSITION)
 						{
 							KIND="USER"
-							VALUE="60.49"
+							VALUE="59.95"
 							OWNER_FILE=""
 						}
 
@@ -15446,7 +26783,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (481)
+				TYPEOF RULE (100)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (response made)"
@@ -15531,7 +26868,7 @@ TYPEOF SCENARIO (0)
 					}
 				}
 
-				TYPEOF RULE (482)
+				TYPEOF RULE (99)
 				{
 					IS_EXPANDED="1"
 					LABEL="Rule: Turn off image (2s timeout)"
@@ -15562,7 +26899,7 @@ TYPEOF SCENARIO (0)
 								TYPEOF PARAMETER (OPERAND_1)
 								{
 									KIND="USER"
-									VALUE="624.0"
+									VALUE="1040"
 									OWNER_FILE=""
 								}
 
@@ -15630,12 +26967,1737 @@ TYPEOF SCENARIO (0)
 			}
 		}
 
-		TYPEOF TASK (73)
+		TYPEOF TASK (74)
+		{
+			LABEL="OFF Dot 76"
+			TASK_KIND="0"
+
+			TYPEOF TASK (76)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (106)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1050"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (75)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (105)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1050"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (104)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (103)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="1050"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (77)
+		{
+			LABEL="OFF Dot 77"
+			TASK_KIND="0"
+
+			TYPEOF TASK (79)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (110)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1060"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (78)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (109)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1060"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (108)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (107)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="1060"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (80)
+		{
+			LABEL="OFF Dot 78"
+			TASK_KIND="0"
+
+			TYPEOF TASK (82)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (114)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1070"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (81)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (113)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1070"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (112)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (111)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="1070"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (83)
+		{
+			LABEL="OFF Dot 79"
+			TASK_KIND="0"
+
+			TYPEOF TASK (85)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (118)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1080"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (84)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (117)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1080"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (116)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (115)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="1080"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (86)
+		{
+			LABEL="OFF Dot 80"
+			TASK_KIND="0"
+
+			TYPEOF TASK (88)
+			{
+				IS_EXPANDED="1"
+				LABEL="Task: ISI"
+				TASK_KIND="0"
+
+				TYPEOF RULE (122)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Go to subtask after Time seconds"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1090"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+
+			TYPEOF TASK (87)
+			{
+				IS_EXPANDED="1"
+				LABEL="Dot display"
+				TASK_KIND="0"
+
+				TYPEOF RULE (121)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn on image"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1090"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (SCREEN_XPOSITION)
+						{
+							KIND="USER"
+							VALUE="20.71"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_YPOSITION)
+						{
+							KIND="USER"
+							VALUE="59.95"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
+						{
+							KIND="USER"
+							VALUE="0.70"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
+						{
+							KIND="USER"
+							VALUE="1.3"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (DISPLAY_TIME)
+						{
+							KIND="USER"
+							VALUE="0"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (120)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (response made)"
+
+					TYPEOF CONDITION (EQUAL)
+					{
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_VHL_HORN)
+							{
+
+								TYPEOF PARAMETER (VHL_NUMBER)
+								{
+									KIND="VEHICLE"
+									VALUE="0"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="USER"
+							VALUE="1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+
+				TYPEOF RULE (119)
+				{
+					IS_EXPANDED="1"
+					LABEL="Rule: Turn off image (2s timeout)"
+
+					TYPEOF CONDITION (SUPERIOR)
+					{
+						IS_EXPANDED="1"
+						MODIFIER="BECOMES_TRUE"
+
+						TYPEOF PARAMETER (OPERAND_1)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
+							{
+							}
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (OPERAND_2)
+						{
+							KIND="FUNCTION"
+
+							TYPEOF FUNCTION (PLUS)
+							{
+								IS_EXPANDED="1"
+
+								TYPEOF PARAMETER (OPERAND_1)
+								{
+									KIND="USER"
+									VALUE="1090"
+									OWNER_FILE=""
+								}
+
+								TYPEOF PARAMETER (OPERAND_2)
+								{
+									KIND="USER"
+									VALUE="2"
+									OWNER_FILE=""
+								}
+							}
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (SET_IMAGE_REMOVE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (IMAGE_FILENAME)
+						{
+							KIND="FILE"
+							VALUE="Red dot.png"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (CHANNEL_NAME)
+						{
+							KIND="USER"
+							VALUE="VISUAL_TRIPLEHEAD:1.1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (ADD_TO_VARIABLE)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (VARIABLE_NAME)
+						{
+							KIND="VARIABLE"
+							VALUE="60"
+							OWNER_FILE=""
+						}
+
+						TYPEOF PARAMETER (FLOAT_VALUE)
+						{
+							KIND="USER"
+							VALUE="-1"
+							OWNER_FILE=""
+						}
+					}
+
+					TYPEOF ACTION (GOTO_TASK)
+					{
+						IS_EXPANDED="1"
+
+						TYPEOF PARAMETER (TASK_NUMBER)
+						{
+							KIND="ENUM"
+							VALUE="GOTO_NEXT_TASK"
+							OWNER_FILE=""
+						}
+					}
+				}
+			}
+		}
+
+		TYPEOF TASK (1)
 		{
 			LABEL="Next Int start time"
 			TASK_KIND="0"
 
-			TYPEOF RULE (198)
+			TYPEOF RULE (2)
 			{
 				IS_EXPANDED="1"
 				LABEL="Rule: Go to next task"
@@ -15658,6354 +28720,7 @@ TYPEOF SCENARIO (0)
 					TYPEOF PARAMETER (OPERAND_2)
 					{
 						KIND="USER"
-						VALUE="630.0"
-						OWNER_FILE=""
-					}
-				}
-
-				TYPEOF ACTION (GOTO_TASK)
-				{
-					IS_EXPANDED="1"
-
-					TYPEOF PARAMETER (TASK_NUMBER)
-					{
-						KIND="ENUM"
-						VALUE="GOTO_NEXT_TASK"
-						OWNER_FILE=""
-					}
-				}
-			}
-		}
-	}
-
-	TYPEOF TASK (8)
-	{
-		LABEL="INT 9"
-		TASK_KIND="0"
-
-		TYPEOF RULE (19)
-		{
-			IS_EXPANDED="1"
-			LABEL="Display int-ON"
-
-			TYPEOF CONDITION (SUPEQUAL)
-			{
-				IS_EXPANDED="1"
-				MODIFIER="BECOMES_TRUE"
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="FUNCTION"
-
-					TYPEOF FUNCTION (GET_TASK_CLOCK)
-					{
-					}
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (SET_IMAGE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (SCREEN_XPOSITION)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_YPOSITION)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-				{
-					KIND="USER"
-					VALUE="8.33333"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-				{
-					KIND="USER"
-					VALUE="5.37"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (IMAGE_FILENAME)
-				{
-					KIND="FILE"
-					VALUE="int-ON.png"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CHANNEL_NAME)
-				{
-					KIND="USER"
-					VALUE="VISUAL_TRIPLEHEAD:1.2"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (DISPLAY_TIME)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (ADD_TO_VARIABLE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (VARIABLE_NAME)
-				{
-					KIND="VARIABLE"
-					VALUE="50"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (FLOAT_VALUE)
-				{
-					KIND="USER"
-					VALUE="1"
-					OWNER_FILE=""
-				}
-			}
-		}
-
-		TYPEOF RULE (20)
-		{
-			IS_EXPANDED="1"
-			LABEL="Remove int-ON"
-
-			TYPEOF CONDITION (SUPEQUAL)
-			{
-				IS_EXPANDED="1"
-				MODIFIER="BECOMES_TRUE"
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="FUNCTION"
-
-					TYPEOF FUNCTION (GET_TASK_CLOCK)
-					{
-					}
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="USER"
-					VALUE="5"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (SET_IMAGE_REMOVE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (IMAGE_FILENAME)
-				{
-					KIND="FILE"
-					VALUE="int-ON.png"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CHANNEL_NAME)
-				{
-					KIND="USER"
-					VALUE="VISUAL_TRIPLEHEAD:1.2"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (ADD_TO_VARIABLE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (VARIABLE_NAME)
-				{
-					KIND="VARIABLE"
-					VALUE="50"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (FLOAT_VALUE)
-				{
-					KIND="USER"
-					VALUE="-1"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (GOTO_TASK)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (TASK_NUMBER)
-				{
-					KIND="ENUM"
-					VALUE="GOTO_NEXT_TASK"
-					OWNER_FILE=""
-				}
-			}
-		}
-	}
-
-	TYPEOF TASK (70)
-	{
-		IS_EXPANDED="1"
-		LABEL="PDT post-INT 9"
-		TASK_KIND="0"
-
-		TYPEOF TASK (363)
-		{
-			LABEL="Dot 43"
-			TASK_KIND="0"
-
-			TYPEOF TASK (364)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (484)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="698.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (365)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (487)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="698.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="8.68"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="60.25"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (485)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (486)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="698.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (366)
-		{
-			LABEL="Dot 44"
-			TASK_KIND="0"
-
-			TYPEOF TASK (367)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (488)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="712.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (368)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (491)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="712.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="17.09"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="60.47"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (489)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (490)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="712.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (369)
-		{
-			LABEL="Dot 45"
-			TASK_KIND="0"
-
-			TYPEOF TASK (370)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (492)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="718.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (371)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (495)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="718.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="15.55"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="56.73"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (493)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (494)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="718.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (372)
-		{
-			LABEL="Dot 46"
-			TASK_KIND="0"
-
-			TYPEOF TASK (373)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (496)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="734.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (374)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (499)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="734.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="22.38"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="61.59"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (497)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (498)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="734.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (375)
-		{
-			LABEL="Dot 47"
-			TASK_KIND="0"
-
-			TYPEOF TASK (376)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (500)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="742.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (377)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (503)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="742.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="21.27"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="60.09"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (501)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (502)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="742.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (378)
-		{
-			LABEL="Dot 48"
-			TASK_KIND="0"
-
-			TYPEOF TASK (379)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (504)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="750.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (380)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (507)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="750.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="13.44"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="59.45"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (505)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (506)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="750.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (381)
-		{
-			LABEL="Dot 49"
-			TASK_KIND="0"
-
-			TYPEOF TASK (382)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (508)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="766.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (383)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (511)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="766.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="15.55"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="62.15"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (509)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (510)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="766.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (384)
-		{
-			LABEL="Dot 50"
-			TASK_KIND="0"
-
-			TYPEOF TASK (385)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (512)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="780.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (386)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (515)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="780.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="25.21"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="57.83"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (513)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (514)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="780.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (387)
-		{
-			LABEL="Dot 51"
-			TASK_KIND="0"
-
-			TYPEOF TASK (388)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (516)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="792.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (389)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (519)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="792.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="21.2"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="59.46"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (517)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (518)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="792.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (390)
-		{
-			LABEL="Dot 52"
-			TASK_KIND="0"
-
-			TYPEOF TASK (391)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (520)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="798.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (392)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (523)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="798.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="26.07"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="59.2"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (521)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (522)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="798.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (393)
-		{
-			LABEL="Dot 53"
-			TASK_KIND="0"
-
-			TYPEOF TASK (394)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (524)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="806.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (395)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (527)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="806.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="21.61"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="56.34"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (525)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (526)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="806.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (82)
-		{
-			LABEL="Next Int start time"
-			TASK_KIND="0"
-
-			TYPEOF RULE (219)
-			{
-				IS_EXPANDED="1"
-				LABEL="Rule: Go to next task"
-
-				TYPEOF CONDITION (SUPERIOR)
-				{
-					IS_EXPANDED="1"
-					MODIFIER="BECOMES_TRUE"
-
-					TYPEOF PARAMETER (OPERAND_1)
-					{
-						KIND="FUNCTION"
-
-						TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-						{
-						}
-						OWNER_FILE=""
-					}
-
-					TYPEOF PARAMETER (OPERAND_2)
-					{
-						KIND="USER"
-						VALUE="810.0"
-						OWNER_FILE=""
-					}
-				}
-
-				TYPEOF ACTION (GOTO_TASK)
-				{
-					IS_EXPANDED="1"
-
-					TYPEOF PARAMETER (TASK_NUMBER)
-					{
-						KIND="ENUM"
-						VALUE="GOTO_NEXT_TASK"
-						OWNER_FILE=""
-					}
-				}
-			}
-		}
-	}
-
-	TYPEOF TASK (3)
-	{
-		LABEL="INT 10"
-		TASK_KIND="0"
-
-		TYPEOF RULE (2)
-		{
-			IS_EXPANDED="1"
-			LABEL="Display int-ON"
-
-			TYPEOF CONDITION (SUPEQUAL)
-			{
-				IS_EXPANDED="1"
-				MODIFIER="BECOMES_TRUE"
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="FUNCTION"
-
-					TYPEOF FUNCTION (GET_TASK_CLOCK)
-					{
-					}
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (SET_IMAGE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (SCREEN_XPOSITION)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_YPOSITION)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-				{
-					KIND="USER"
-					VALUE="8.33333"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-				{
-					KIND="USER"
-					VALUE="5.37"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (IMAGE_FILENAME)
-				{
-					KIND="FILE"
-					VALUE="int-ON.png"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CHANNEL_NAME)
-				{
-					KIND="USER"
-					VALUE="VISUAL_TRIPLEHEAD:1.2"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (DISPLAY_TIME)
-				{
-					KIND="USER"
-					VALUE="0"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (ADD_TO_VARIABLE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (VARIABLE_NAME)
-				{
-					KIND="VARIABLE"
-					VALUE="50"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (FLOAT_VALUE)
-				{
-					KIND="USER"
-					VALUE="1"
-					OWNER_FILE=""
-				}
-			}
-		}
-
-		TYPEOF RULE (5)
-		{
-			IS_EXPANDED="1"
-			LABEL="Remove int-ON"
-
-			TYPEOF CONDITION (SUPEQUAL)
-			{
-				IS_EXPANDED="1"
-				MODIFIER="BECOMES_TRUE"
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="FUNCTION"
-
-					TYPEOF FUNCTION (GET_TASK_CLOCK)
-					{
-					}
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CLOCK)
-				{
-					KIND="USER"
-					VALUE="5"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (SET_IMAGE_REMOVE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (IMAGE_FILENAME)
-				{
-					KIND="FILE"
-					VALUE="int-ON.png"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (CHANNEL_NAME)
-				{
-					KIND="USER"
-					VALUE="VISUAL_TRIPLEHEAD:1.2"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (ADD_TO_VARIABLE)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (VARIABLE_NAME)
-				{
-					KIND="VARIABLE"
-					VALUE="50"
-					OWNER_FILE=""
-				}
-
-				TYPEOF PARAMETER (FLOAT_VALUE)
-				{
-					KIND="USER"
-					VALUE="-1"
-					OWNER_FILE=""
-				}
-			}
-
-			TYPEOF ACTION (GOTO_TASK)
-			{
-				IS_EXPANDED="1"
-
-				TYPEOF PARAMETER (TASK_NUMBER)
-				{
-					KIND="ENUM"
-					VALUE="GOTO_NEXT_TASK"
-					OWNER_FILE=""
-				}
-			}
-		}
-	}
-
-	TYPEOF TASK (81)
-	{
-		IS_EXPANDED="1"
-		LABEL="PDT post-INT 10"
-		TASK_KIND="0"
-
-		TYPEOF TASK (396)
-		{
-			LABEL="Dot 54"
-			TASK_KIND="0"
-
-			TYPEOF TASK (397)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (528)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="880.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (398)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (531)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="880.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="10.51"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="61.59"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (529)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (530)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="880.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (399)
-		{
-			LABEL="Dot 55"
-			TASK_KIND="0"
-
-			TYPEOF TASK (400)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (532)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="888.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (401)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (535)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="888.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="25.56"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="56.43"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (533)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (534)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="888.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (402)
-		{
-			LABEL="Dot 56"
-			TASK_KIND="0"
-
-			TYPEOF TASK (403)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (536)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="902.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (404)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (539)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="902.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="15.02"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="61.22"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (537)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (538)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="902.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (405)
-		{
-			LABEL="Dot 57"
-			TASK_KIND="0"
-
-			TYPEOF TASK (406)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (540)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="912.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (407)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (543)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="912.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="26.68"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="59.85"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (541)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (542)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="912.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (408)
-		{
-			LABEL="Dot 58"
-			TASK_KIND="0"
-
-			TYPEOF TASK (409)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (544)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="920.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (410)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (547)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="920.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="8.23"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="59.74"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (545)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (546)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="920.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (411)
-		{
-			LABEL="Dot 59"
-			TASK_KIND="0"
-
-			TYPEOF TASK (412)
-			{
-				IS_EXPANDED="1"
-				LABEL="Task: ISI"
-				TASK_KIND="0"
-
-				TYPEOF RULE (548)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Go to subtask after Time seconds"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="928.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-
-			TYPEOF TASK (413)
-			{
-				IS_EXPANDED="1"
-				LABEL="Dot display"
-				TASK_KIND="0"
-
-				TYPEOF RULE (551)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn on image"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="928.0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (SCREEN_XPOSITION)
-						{
-							KIND="USER"
-							VALUE="22.32"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_YPOSITION)
-						{
-							KIND="USER"
-							VALUE="60.53"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_WIDTH)
-						{
-							KIND="USER"
-							VALUE="0.70"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (SCREEN_PERCENTAGE_HEIGHT)
-						{
-							KIND="USER"
-							VALUE="1.3"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (DISPLAY_TIME)
-						{
-							KIND="USER"
-							VALUE="0"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (549)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (response made)"
-
-					TYPEOF CONDITION (EQUAL)
-					{
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_VHL_HORN)
-							{
-
-								TYPEOF PARAMETER (VHL_NUMBER)
-								{
-									KIND="VEHICLE"
-									VALUE="0"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="USER"
-							VALUE="1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-
-				TYPEOF RULE (550)
-				{
-					IS_EXPANDED="1"
-					LABEL="Rule: Turn off image (2s timeout)"
-
-					TYPEOF CONDITION (SUPERIOR)
-					{
-						IS_EXPANDED="1"
-						MODIFIER="BECOMES_TRUE"
-
-						TYPEOF PARAMETER (OPERAND_1)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-							{
-							}
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (OPERAND_2)
-						{
-							KIND="FUNCTION"
-
-							TYPEOF FUNCTION (PLUS)
-							{
-								IS_EXPANDED="1"
-
-								TYPEOF PARAMETER (OPERAND_1)
-								{
-									KIND="USER"
-									VALUE="928.0"
-									OWNER_FILE=""
-								}
-
-								TYPEOF PARAMETER (OPERAND_2)
-								{
-									KIND="USER"
-									VALUE="2"
-									OWNER_FILE=""
-								}
-							}
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (SET_IMAGE_REMOVE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (IMAGE_FILENAME)
-						{
-							KIND="FILE"
-							VALUE="Red dot.png"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (CHANNEL_NAME)
-						{
-							KIND="USER"
-							VALUE="VISUAL_TRIPLEHEAD:1.1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (ADD_TO_VARIABLE)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (VARIABLE_NAME)
-						{
-							KIND="VARIABLE"
-							VALUE="60"
-							OWNER_FILE=""
-						}
-
-						TYPEOF PARAMETER (FLOAT_VALUE)
-						{
-							KIND="USER"
-							VALUE="-1"
-							OWNER_FILE=""
-						}
-					}
-
-					TYPEOF ACTION (GOTO_TASK)
-					{
-						IS_EXPANDED="1"
-
-						TYPEOF PARAMETER (TASK_NUMBER)
-						{
-							KIND="ENUM"
-							VALUE="GOTO_NEXT_TASK"
-							OWNER_FILE=""
-						}
-					}
-				}
-			}
-		}
-
-		TYPEOF TASK (92)
-		{
-			LABEL="Next Int start time"
-			TASK_KIND="0"
-
-			TYPEOF RULE (243)
-			{
-				IS_EXPANDED="1"
-				LABEL="Rule: Go to next task"
-
-				TYPEOF CONDITION (SUPERIOR)
-				{
-					IS_EXPANDED="1"
-					MODIFIER="BECOMES_TRUE"
-
-					TYPEOF PARAMETER (OPERAND_1)
-					{
-						KIND="FUNCTION"
-
-						TYPEOF FUNCTION (GET_SCENARIO_CLOCK)
-						{
-						}
-						OWNER_FILE=""
-					}
-
-					TYPEOF PARAMETER (OPERAND_2)
-					{
-						KIND="USER"
-						VALUE="932.0"
+						VALUE="1160"
 						OWNER_FILE=""
 					}
 				}
@@ -22053,7 +28768,7 @@ TYPEOF SCENARIO (0)
 				TYPEOF PARAMETER (OPERAND_2)
 				{
 					KIND="USER"
-					VALUE="934.0"
+					VALUE="1165"
 					OWNER_FILE=""
 				}
 			}
@@ -22100,7 +28815,7 @@ TYPEOF SCENARIO (0)
 				TYPEOF PARAMETER (CHANNEL_NAME)
 				{
 					KIND="USER"
-					VALUE="VISUAL_TRIPLEHEAD:1.2"
+					VALUE="VISUAL_TRIPLEHEAD:1.6"
 					OWNER_FILE=""
 				}
 
@@ -22136,7 +28851,7 @@ TYPEOF SCENARIO (0)
 				TYPEOF PARAMETER (OPERAND_2)
 				{
 					KIND="USER"
-					VALUE="940.0"
+					VALUE="1170"
 					OWNER_FILE=""
 				}
 			}
@@ -22174,13 +28889,13 @@ TYPEOF SCENARIO (0)
       <initEngineRunning>1</initEngineRunning>
       <recomputeRestitutionMovement>1</recomputeRestitutionMovement>
       <ObjectPosition>
-        <position>-1217.25011731616 9881.44882671889 0</position>
-        <heading>4.32327222824097</heading>
+        <position>-1569.08176690979 8150.81137447575 0</position>
+        <heading>5.16762971878052</heading>
         <RoadPosition>
           <subNetwork>Sub Network</subNetwork>
           <track>Track</track>
-          <abscissa>16854.9043272707</abscissa>
-          <gapInItnSystem>5.39999999486209</gapInItnSystem>
+          <abscissa>14984.0778629586</abscissa>
+          <gapInItnSystem>5.39999999867969</gapInItnSystem>
           <relativeHeading>3.14159250259399</relativeHeading>
         </RoadPosition>
       </ObjectPosition>
@@ -22302,13 +29017,13 @@ TYPEOF SCENARIO (0)
       <process>TRAFFIC</process>
       <isActivated>1</isActivated>
       <ObjectPosition>
-        <position>-949.251649051406 7.39814058910448 0</position>
-        <heading>0.113086014986038</heading>
+        <position>-967.12659474982 5.36279704719831 0</position>
+        <heading>0.113709196448326</heading>
         <RoadPosition>
           <subNetwork>Sub Network</subNetwork>
           <track>Track</track>
-          <abscissa>30.3042023259521</abscissa>
-          <gapInItnSystem>-1.89999999997278</gapInItnSystem>
+          <abscissa>12.3017058946934</abscissa>
+          <gapInItnSystem>-1.89999999997573</gapInItnSystem>
           <relativeHeading>0</relativeHeading>
         </RoadPosition>
       </ObjectPosition>
@@ -22328,14 +29043,14 @@ TYPEOF SCENARIO (0)
       <name>Sink</name>
       <isActivated>1</isActivated>
       <ObjectPosition>
-        <position>2029.17340554442 12140.1476029447 0</position>
-        <heading>0.694738388061523</heading>
+        <position>-1572.70256350029 8158.22285167853 0</position>
+        <heading>5.16593360900879</heading>
         <RoadPosition>
           <subNetwork>Sub Network</subNetwork>
           <track>Track</track>
-          <abscissa>21130.4034857314</abscissa>
-          <gapInItnSystem>34.7968206074201</gapInItnSystem>
-          <relativeHeading>6.28242921829224</relativeHeading>
+          <abscissa>14992.7790695671</abscissa>
+          <gapInItnSystem>5.39999998962715</gapInItnSystem>
+          <relativeHeading>3.14159274101257</relativeHeading>
         </RoadPosition>
       </ObjectPosition>
     </Sink>
@@ -22344,41 +29059,14 @@ TYPEOF SCENARIO (0)
       <process>TRAFFIC</process>
       <isActivated>1</isActivated>
       <ObjectPosition>
-        <position>-1152.21740276615 10096.8941861984 0</position>
-        <heading>4.46664905548096</heading>
+        <position>-1573.27707351582 8151.42217986838 0</position>
+        <heading>5.16718864440918</heading>
         <RoadPosition>
           <subNetwork>Sub Network</subNetwork>
           <track>Track</track>
-          <abscissa>17079.5644865705</abscissa>
-          <gapInItnSystem>1.89999999961288</gapInItnSystem>
-          <relativeHeading>3.14159297943115</relativeHeading>
-        </RoadPosition>
-      </ObjectPosition>
-      <TimeSlice>
-        <permanent>1</permanent>
-        <begin>0</begin>
-        <end>0</end>
-        <flow>100</flow>
-        <generationFunction>UniformDistribution</generationFunction>
-        <TimeSliceProfile>
-          <id>normal_profile</id>
-          <percentage>100</percentage>
-        </TimeSliceProfile>
-      </TimeSlice>
-    </Source>
-    <Source>
-      <name>Source 2</name>
-      <process>TRAFFIC</process>
-      <isActivated>1</isActivated>
-      <ObjectPosition>
-        <position>-969.715578214858 8.58977037208076 0</position>
-        <heading>0.113809607923031</heading>
-        <RoadPosition>
-          <subNetwork>Sub Network</subNetwork>
-          <track>Track</track>
-          <abscissa>9.30128982281699</abscissa>
-          <gapInItnSystem>-5.39999999993229</gapInItnSystem>
-          <relativeHeading>0</relativeHeading>
+          <abscissa>14987.0782790305</abscissa>
+          <gapInItnSystem>1.89999999954245</gapInItnSystem>
+          <relativeHeading>3.14159274101257</relativeHeading>
         </RoadPosition>
       </ObjectPosition>
       <TimeSlice>
@@ -22508,13 +29196,13 @@ TYPEOF SCENARIO (0)
       <initEngineRunning>1</initEngineRunning>
       <recomputeRestitutionMovement>1</recomputeRestitutionMovement>
       <ObjectPosition>
-        <position>-625.144247104928 6547.25439536011 0.984307839678908</position>
-        <heading>5.35804319381714</heading>
+        <position>-621.614859172249 6548.38651012539 0.979986881782534</position>
+        <heading>5.35830879211426</heading>
         <RoadPosition>
           <subNetwork>Sub Network</subNetwork>
           <track>Track</track>
-          <abscissa>13122.319690356</abscissa>
-          <gapInItnSystem>1.89999999895464</gapInItnSystem>
+          <abscissa>13121.1195239272</abscissa>
+          <gapInItnSystem>5.39999999701878</gapInItnSystem>
           <relativeHeading>3.14159274101257</relativeHeading>
         </RoadPosition>
       </ObjectPosition>
@@ -22590,13 +29278,13 @@ TYPEOF SCENARIO (0)
       <initEngineRunning>1</initEngineRunning>
       <recomputeRestitutionMovement>1</recomputeRestitutionMovement>
       <ObjectPosition>
-        <position>656.061927460462 5812.43305771024 0</position>
-        <heading>3.12968397140503</heading>
+        <position>667.433795186373 5808.81141987441 0</position>
+        <heading>3.13209104537964</heading>
         <RoadPosition>
           <subNetwork>Sub Network</subNetwork>
           <track>Track</track>
-          <abscissa>11577.4054549441</abscissa>
-          <gapInItnSystem>-1.89999999893205</gapInItnSystem>
+          <abscissa>11566.0038738709</abscissa>
+          <gapInItnSystem>-5.39999999759372</gapInItnSystem>
           <relativeHeading>0</relativeHeading>
         </RoadPosition>
       </ObjectPosition>
@@ -22842,13 +29530,13 @@ TYPEOF SCENARIO (0)
       <initEngineRunning>1</initEngineRunning>
       <recomputeRestitutionMovement>1</recomputeRestitutionMovement>
       <ObjectPosition>
-        <position>2519.82366382775 3927.03636652143 0</position>
-        <heading>2.68800020217896</heading>
+        <position>2524.13901760042 3924.9323942184 0</position>
+        <heading>2.68789839744568</heading>
         <RoadPosition>
           <subNetwork>Sub Network</subNetwork>
           <track>Track</track>
-          <abscissa>8508.5798966234</abscissa>
-          <gapInItnSystem>-5.39999999997623</gapInItnSystem>
+          <abscissa>8503.77923090839</abscissa>
+          <gapInItnSystem>-5.39999999996892</gapInItnSystem>
           <relativeHeading>0</relativeHeading>
         </RoadPosition>
       </ObjectPosition>
@@ -23010,13 +29698,13 @@ TYPEOF SCENARIO (0)
       <initEngineRunning>1</initEngineRunning>
       <recomputeRestitutionMovement>1</recomputeRestitutionMovement>
       <ObjectPosition>
-        <position>3577.81000043488 1878.20064993414 0</position>
-        <heading>2.21080422401428</heading>
+        <position>3575.4725994685 1881.33829352974 0</position>
+        <heading>2.2113082408905</heading>
         <RoadPosition>
           <subNetwork>Sub Network</subNetwork>
           <track>Track</track>
-          <abscissa>5949.22498731504</abscissa>
-          <gapInItnSystem>-1.89999999960901</gapInItnSystem>
+          <abscissa>5953.12552820848</abscissa>
+          <gapInItnSystem>-1.89999999967886</gapInItnSystem>
           <relativeHeading>0</relativeHeading>
         </RoadPosition>
       </ObjectPosition>
@@ -23094,13 +29782,13 @@ TYPEOF SCENARIO (0)
       <initEngineRunning>1</initEngineRunning>
       <recomputeRestitutionMovement>1</recomputeRestitutionMovement>
       <ObjectPosition>
-        <position>3112.44472678835 526.878880498625 0</position>
-        <heading>0.168062850832939</heading>
+        <position>3111.86343404935 526.780506726227 0</position>
+        <heading>0.167226552963257</heading>
         <RoadPosition>
           <subNetwork>Sub Network</subNetwork>
           <track>Track</track>
-          <abscissa>4215.58458098701</abscissa>
-          <gapInItnSystem>-5.3999998816054</gapInItnSystem>
+          <abscissa>4214.98449777264</abscissa>
+          <gapInItnSystem>-5.39999988214683</gapInItnSystem>
           <relativeHeading>0</relativeHeading>
         </RoadPosition>
       </ObjectPosition>
@@ -23178,13 +29866,13 @@ TYPEOF SCENARIO (0)
       <initEngineRunning>1</initEngineRunning>
       <recomputeRestitutionMovement>1</recomputeRestitutionMovement>
       <ObjectPosition>
-        <position>1808.11008929312 91.5503408730058 1.59182988478626</position>
-        <heading>0.115978762507439</heading>
+        <position>1810.60362531025 88.3181609127005 1.65308475899589</position>
+        <heading>0.116915240883827</heading>
         <RoadPosition>
           <subNetwork>Sub Network</subNetwork>
           <track>Track</track>
-          <abscissa>2808.98952649115</abscissa>
-          <gapInItnSystem>-5.39999998793178</gapInItnSystem>
+          <abscissa>2811.08981774146</abscissa>
+          <gapInItnSystem>-1.89999999574342</gapInItnSystem>
           <relativeHeading>0</relativeHeading>
         </RoadPosition>
       </ObjectPosition>
@@ -23262,13 +29950,13 @@ TYPEOF SCENARIO (0)
       <initEngineRunning>1</initEngineRunning>
       <recomputeRestitutionMovement>1</recomputeRestitutionMovement>
       <ObjectPosition>
-        <position>153.400789325594 124.819655732771 0.944578036199835</position>
-        <heading>0.0907581299543381</heading>
+        <position>155.205675335664 124.983862510191 0.915435290989304</position>
+        <heading>0.0907003507018089</heading>
         <RoadPosition>
           <subNetwork>Sub Network</subNetwork>
           <track>Track</track>
-          <abscissa>1138.05781606272</abscissa>
-          <gapInItnSystem>-5.39999999993755</gapInItnSystem>
+          <abscissa>1139.85806570585</abscissa>
+          <gapInItnSystem>-5.39999999993723</gapInItnSystem>
           <relativeHeading>0</relativeHeading>
         </RoadPosition>
       </ObjectPosition>
@@ -23345,6 +30033,33 @@ TYPEOF SCENARIO (0)
         </RoadPosition>
       </ObjectPosition>
     </Sink>
+    <Source>
+      <name>Source 2</name>
+      <process>TRAFFIC</process>
+      <isActivated>1</isActivated>
+      <ObjectPosition>
+        <position>-967.980472172077 8.78802770314801 0</position>
+        <heading>0.113729357719421</heading>
+        <RoadPosition>
+          <subNetwork>Sub Network</subNetwork>
+          <track>Track</track>
+          <abscissa>11.7016226803181</abscissa>
+          <gapInItnSystem>-5.39999999993128</gapInItnSystem>
+          <relativeHeading>0</relativeHeading>
+        </RoadPosition>
+      </ObjectPosition>
+      <TimeSlice>
+        <permanent>1</permanent>
+        <begin>0</begin>
+        <end>0</end>
+        <flow>100</flow>
+        <generationFunction>UniformDistribution</generationFunction>
+        <TimeSliceProfile>
+          <id>normal_profile</id>
+          <percentage>100</percentage>
+        </TimeSliceProfile>
+      </TimeSlice>
+    </Source>
   </Scenario>
 
 </sce>
