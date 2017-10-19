@@ -1,9 +1,6 @@
 import re
 import subjectcall
 
-# Load the scenario part templates
-scepart1 = open("input/aqPart1.sce")
-scepart2 = open("input/aqPart2.sce")
 
 # Set the search templates
 ISISTR = "LABEL=\"Task: ISI\""
@@ -14,114 +11,119 @@ VALSTROFF = re.compile(r"\t\t\t\t\t\t\t\t\tVALUE")
 POSXSTR = re.compile(r"^\t\t\t\t\t\tTYPEOF PARAMETER \(SCREEN_XPOSITION\)")
 POSYSTR = re.compile(r"^\t\t\t\t\t\tTYPEOF PARAMETER \(SCREEN_YPOSITION\)")
 
-# Set the counters and switches
-switch = 0
-counter = 0
-lastswitch = None
 
 def valuesub(line, replacement):
     sub = re.sub(r"(\d+(\.\d+)?)", replacement, line)
     return sub
 
 
-testsubj = subjectcall.Subject("LASTTEST")
-testout = open("output/testfull1.sce", 'w')
+for subjectid in range(1,21):
+        
+    # Load the scenario part templates
+    scepart1 = open("input/aqFinalPart1.sce")
+    scepart2 = open("input/aqFinalPart2.sce")
 
-for line in scepart1:
-
-    if ISISTR in line:
-        counter += 1
-        lookup = subjectcall.DOTLOOKUPDICT[str(counter)]
-        trialinfo = testsubj.finaldict[lookup[0]][int(lookup[1])]
-        trialtime = trialinfo['time']
-        xposition = trialinfo['locationinfo'][2]
-        yposition = trialinfo['locationinfo'][3]
-
-    if ISISTR in line or ONISTR in line:
-        switch = 1
-        lastswitch = "time"
-
-    if OFFISTR in line:
-        switch = 1
-        lastswitch = "offtime"
-
-    if re.search(POSYSTR, line):
-        switch = 1
-        lastswitch = "y"
-
-    if re.search(POSXSTR, line):
-        switch = 1
-        lastswitch = "x"
-
-    elif re.match(VALSTR, line) and switch == 1:
-        switch = 0
-        if lastswitch == 'time':
-            line = valuesub(line, str(trialtime))
-            # print("Time", line)
-        elif lastswitch == 'y':
-            line = valuesub(line, str(yposition))
-            # print("Y Pos", line)
-        elif lastswitch == 'x':
-            line = valuesub(line, str(xposition))
-            # print("X Pos", line)
-    
-    elif re.match(VALSTROFF, line) and switch == 1:
-        switch = 0
-        if lastswitch == "offtime":
-            line = valuesub(line, str(trialtime))
-            print("made it")
-    testout.write(line)
-
-testout.close()
-testout = open("output/testfull2.sce", 'w')
-
-for line in scepart2:
-
-    if ISISTR in line:
-        counter += 1
-        lookup = subjectcall.DOTLOOKUPDICT[str(counter)]
-        trialinfo = testsubj.finaldict[lookup[0]][int(lookup[1])]
-        trialtime = trialinfo['time']
-        xposition = trialinfo['locationinfo'][2]
-        yposition = trialinfo['locationinfo'][3]
-
-    if ISISTR in line or ONISTR in line:
-        switch = 1
-        lastswitch = "time"
-
-    if OFFISTR in line:
-        switch = 1
-        lastswitch = "offtime"
-
-    if re.search(POSYSTR, line):
-        switch = 1
-        lastswitch = "y"
-
-    if re.search(POSXSTR, line):
-        switch = 1
-        lastswitch = "x"
-
-    elif re.match(VALSTR, line) and switch == 1:
-        switch = 0
-        if lastswitch == 'time':
-            line = valuesub(line, str(trialtime))
-            # print("Time", line)
-        elif lastswitch == 'y':
-            line = valuesub(line, str(yposition))
-            # print("Y Pos", line)
-        elif lastswitch == 'x':
-            line = valuesub(line, str(xposition))
-            # print("X Pos", line)
-    
-    elif re.match(VALSTROFF, line) and switch == 1:
-        switch = 0
-        if lastswitch == "offtime":
-            line = valuesub(line, str(trialtime))
-            print("made it")
-            
-    testout.write(line)
+    # Set the counters and switches
+    switch = 0
+    counter = 0
+    lastswitch = None
 
 
+    subj = subjectcall.Subject("P%s" % subjectid)
+    testout = open("output/pid%s_aq1.sce" % (subjectid), 'w')
 
-testsubj.writeout()
-testout.close()
+    for line in scepart1:
+
+        if ISISTR in line:
+            counter += 1
+            lookup = subjectcall.DOTLOOKUPDICT[str(counter)]
+            trialinfo = subj.finaldict[lookup[0]][int(lookup[1])]
+            trialtime = trialinfo['time']
+            xposition = trialinfo['locationinfo'][2]
+            yposition = trialinfo['locationinfo'][3]
+
+        if ISISTR in line or ONISTR in line:
+            switch = 1
+            lastswitch = "time"
+
+        if OFFISTR in line:
+            switch = 1
+            lastswitch = "offtime"
+
+        if re.search(POSYSTR, line):
+            switch = 1
+            lastswitch = "y"
+
+        if re.search(POSXSTR, line):
+            switch = 1
+            lastswitch = "x"
+
+        elif re.match(VALSTR, line) and switch == 1:
+            switch = 0
+            if lastswitch == 'time':
+                line = valuesub(line, str(trialtime))
+                # print("Time", line)
+            elif lastswitch == 'y':
+                line = valuesub(line, str(yposition))
+                # print("Y Pos", line)
+            elif lastswitch == 'x':
+                line = valuesub(line, str(xposition))
+                # print("X Pos", line)
+        
+        elif re.match(VALSTROFF, line) and switch == 1:
+            switch = 0
+            if lastswitch == "offtime":
+                line = valuesub(line, str(trialtime))
+                # print("made it")
+        testout.write(line)
+
+    testout.close()
+    testout = open("output/pid%s_aq2.sce" % (subjectid), 'w')
+
+    for line in scepart2:
+
+        if ISISTR in line:
+            counter += 1
+            lookup = subjectcall.DOTLOOKUPDICT[str(counter)]
+            trialinfo = subj.finaldict[lookup[0]][int(lookup[1])]
+            trialtime = trialinfo['time']
+            xposition = trialinfo['locationinfo'][2]
+            yposition = trialinfo['locationinfo'][3]
+
+        if ISISTR in line or ONISTR in line:
+            switch = 1
+            lastswitch = "time"
+
+        if OFFISTR in line:
+            switch = 1
+            lastswitch = "offtime"
+
+        if re.search(POSYSTR, line):
+            switch = 1
+            lastswitch = "y"
+
+        if re.search(POSXSTR, line):
+            switch = 1
+            lastswitch = "x"
+
+        elif re.match(VALSTR, line) and switch == 1:
+            switch = 0
+            if lastswitch == 'time':
+                line = valuesub(line, str(trialtime))
+                # print("Time", line)
+            elif lastswitch == 'y':
+                line = valuesub(line, str(yposition))
+                # print("Y Pos", line)
+            elif lastswitch == 'x':
+                line = valuesub(line, str(xposition))
+                # print("X Pos", line)
+        
+        elif re.match(VALSTROFF, line) and switch == 1:
+            switch = 0
+            if lastswitch == "offtime":
+                line = valuesub(line, str(trialtime))
+                # print("made it")
+
+        testout.write(line)
+    subj.writeout()
+    testout.close()
