@@ -20,8 +20,8 @@ def valuesub(line, replacement):
 for subjectid in range(1,21):
         
     # Load the scenario part templates
-    scepart1 = open("input/aqFinalPart1.sce")
-    scepart2 = open("input/aqFinalPart2.sce")
+    scepart1 = open("input/aqPart1.sce")
+    scepart2 = open("input/aqPart2.sce")
 
     # Set the counters and switches
     switch = 0
